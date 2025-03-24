@@ -776,7 +776,7 @@ input[type="checkbox"] {
 }
 @media (max-width: 768px) {
   .login-section {
-    width: 340px;
+    width: 325px;
   }
 }
 
@@ -923,6 +923,13 @@ select.form-control {
   border-radius: 50%;
   font-size: 14px;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    width: 30px;
+    height: 25px;
+}
 }
 /* end login  */
 
