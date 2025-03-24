@@ -325,12 +325,51 @@ if (document.querySelector(".date-container")) {
 }
 // fileUpload
 if (document.querySelector(".fileUpload")) {
-  document.querySelectorAll(".fileUpload").forEach((input) => {
-    input.addEventListener("change", function () {
-      let fileName = this.files[0] ? this.files[0].name : "لم يتم اختيار ملف";
-      this.closest(".upload-container").querySelector(
-        ".upload-text"
-      ).textContent = fileName;
-    });
+if (document.querySelector(".fileUpload")) {
+  document.body.addEventListener("change", function (event) {
+    if (event.target.matches('input[type="file"]')) {
+      const fileInput = event.target;
+      const file = fileInput.files[0];
+      const uploadText = fileInput
+        .closest(".upload-container")
+        .querySelector(".upload-text");
+
+      if (file) {
+        const fileName = file.name.toLowerCase();
+        const fileType = file.type;
+        let allowedExtensions = [];
+
+        // تحديد الأنواع بناءً على الـ id
+        switch (fileInput.id) {
+          case "fileLease":
+            allowedExtensions = ["image/png"];
+            break;
+          case "file_Employment_contract":
+            allowedExtensions = [
+              "application/pdf",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            ]; // تصحيح امتداد docx
+            break;
+          case "file_Purchase_Contract":
+            allowedExtensions = ["application/pdf", "image/jpeg"]; // تصحيح امتداد jpg إلى jpeg
+            break;
+        }
+
+        // التحقق من النوع
+        const isValid = allowedExtensions.some(
+          (ext) => fileType === ext || fileName.endsWith(ext.split("/").pop())
+        );
+
+        if (!isValid) {
+          alert("نوع الملف غير مسموح!");
+          fileInput.value = ""; // مسح الملف المختار
+          
+        } else {
+          uploadText.textContent = fileName; // تحديث اسم الملف فقط إذا كان مسموحًا
+        }
+      }
+    }
   });
+}
+
 }
