@@ -887,8 +887,16 @@ select.form-control {
   margin-top: 5px;
 }
 
-.iti {
-  width: 100%;
+@media (min-width: 768px) {
+  .iti {
+    width: 100%;
+  }
+}
+
+
+.iti-mobile .iti--container {
+    top: 25% !important;
+    bottom: 0 !important;
 }
 
 .alert-box {
