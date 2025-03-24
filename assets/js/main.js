@@ -342,7 +342,7 @@ if (document.querySelector(".fileUpload")) {
         // تحديد الأنواع بناءً على الـ id
         switch (fileInput.id) {
           case "fileLease":
-            allowedExtensions = ["image/png"];
+            allowedExtensions = ["image/png" ,"image/jpg"];
             break;
           case "file_Employment_contract":
             allowedExtensions = [
