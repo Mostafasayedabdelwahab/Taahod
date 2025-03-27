@@ -1054,16 +1054,17 @@ input[type="checkbox"] {
   border: none;
   outline: none;
   flex: 1;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   width: 100%;
+  border-radius: 5px;
 }
 
 .fillter-section .search-box button {
   background: var(--main-color--);
   color: white;
   border: none;
-  padding: 2px 15px;
+  padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
   transition: var(--transition);
@@ -1161,7 +1162,7 @@ input[type="checkbox"] {
 @media (max-width: 991px) {
   .filter {
     position: fixed;
-    bottom: -120%;
+    bottom: -150%;
     background: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: 0.8s ease-in-out;
