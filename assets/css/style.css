@@ -107,14 +107,15 @@ body section {
     display: block;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        inset: unset !important;
   }
 
   .dropdown:hover .dropdown-menu {
     visibility: visible;
     opacity: 1;
-    transform: translateY(10px);
+    transform: translateY(10px) !important;
   }
 }
 
@@ -938,6 +939,27 @@ select.form-control {
     height: 25px;
   }
 }
+
+.login-container .dropdown button {
+  white-space: nowrap;
+  border: none;
+  background-color: transparent;
+  transition: var(--transition);
+  color: var(--main-color--);
+}
+.login-container .dropdown button:active,
+.login-container .dropdown button:hover {
+  background-color: #fff;
+  color: var(--main-color--);
+}
+
+.login-container .dropdown-toggle::after {
+    position: relative;
+    left: -6px;
+    top: 2px;
+}
+
+
 /* end login  */
 
 /* start projects */
