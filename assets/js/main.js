@@ -373,3 +373,41 @@ if (document.querySelector(".fileUpload")) {
 }
 
 }
+
+// Filter
+if (document.getElementById("filter")) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("filter");
+    const openSidebar = document.getElementById("openFilter");
+    const closeSidebar = document.getElementById("closeFilter");
+
+    // فتح السايدبار
+    openSidebar.addEventListener("click", function (event) {
+      event.stopPropagation(); // عشان الضغط على الزرار نفسه ميقفلهاش
+      sidebar.classList.toggle("open");
+      document.body.classList.add("overflow-hidden");
+    });
+
+    // إغلاق السايدبار بالزرار
+    closeSidebar.addEventListener("click", function () {
+      sidebar.classList.remove("open");
+      document.body.classList.remove("overflow-hidden");
+    });
+
+    // إغلاق السايدبار عند الضغط خارجها
+    document.addEventListener("click", function (event) {
+      if (
+        !sidebar.contains(event.target) &&
+        !openSidebar.contains(event.target)
+      ) {
+        sidebar.classList.remove("open");
+        document.body.classList.remove("overflow-hidden");
+      }
+    });
+
+    // منع إغلاقها لو ضغطت جواها
+    sidebar.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  });
+}
