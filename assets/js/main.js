@@ -425,13 +425,13 @@ if (document.querySelector(".upload-box")) {
                         <p class="m-0  status-text d-flex gap-1 align-items-center " data-status> <i class="fa-solid fa-spinner"></i> جاري الرفع...</p>
                     </div>
                     </div>
-                    <button class="delete-btn" onclick="this.parentElement.remove()">
-                        <i class="fa-solid fa-trash"></i>
-                        </button>
+                    <button class="delete-btn" onclick="this.parentElement.parentElement.remove()">
+                    <i class="fa-solid fa-trash"></i>
+                    </button>
                     </div>
-                        <div class="progress mt-1">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-progress></div>
-                        </div>
+                    <div class="progress mt-1">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-progress></div>
+                    </div>
         `;
 
       fileList.appendChild(fileItem);
