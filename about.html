@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعاهد</title>
+    <meta property="og:title" content="تعاهد" />
+    <meta property="og:description"
+        content="تعاهد هي منصة رقمية موثوقة تعمل كوسيط يجمع بين طالبي الخدمات ومقدميها في قطاع المقاولات. نهدف إلى تسهيل عمليات البحث، التعاقد، وتنفيذ المشاريع من خلال توفير بيئة آمنة واحترافية تجمع بين المقاولين، العمال، والمكاتب الهندسية." />
+    <meta property="og:image" content="/assets/img/logo.png" />
+    <!-- <meta property="og:url" content=" اكتب لينك الموقع https://tanafos.sa" /> -->
+    <meta property="og:type" content="websit" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+    <!-- استدعاء الخط  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="fixed-top navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- اللوجو -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/head-logo.png" alt="شعار">
+                </a>
+
+                <!-- زر التبديل للجوال -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <label for="burger" class="burger">
+                        <input id="burger" type="checkbox">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </button>
+
+                <!-- القوائم -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav  p-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"> من نحن</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">المشاريع</a></li>
+                        <li class="nav-item"><a class="nav-link" href="serviceProviders.html">مزودي الخدمات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">المدونة</a></li>
+                    </ul>
+                    <!-- الهاتف فقط أزرار التسجيل -->
+                    <div class=" login-btns d-flex d-lg-none">
+                        <div class="dropdown">
+                            <button class="btn btn-custom dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                التسجيل
+                            </button>
+                            <ul class="dropdown-menu text-align-right">
+                                <li><a class="dropdown-item" href="registerContractor.html">كمقاول</a></li>
+                                <li><a class="dropdown-item" href="registerIndividual.html"> كفرد</a></li>
+                                <li><a class="dropdown-item" href="registerEngineer.html">كمكتب هندسي</a></li>
+                            </ul>
+                        </div>
+                        <a href="login.html" class="btn  me-2">تسجيل الدخول</a>
+                    </div>
+                </div>
+                <!-- أزرار التسجيل -->
+                <div class=" login-btns d-lg-flex d-none">
+                    <div class="dropdown">
+                        <button class="btn btn-custom dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            التسجيل
+                        </button>
+                        <ul class="dropdown-menu text-align-right">
+                            <li><a class="dropdown-item" href="registerContractor.html">كمقاول</a></li>
+                            <li><a class="dropdown-item" href="registerIndividual.html">كفرد</a></li>
+                            <li><a class="dropdown-item" href="registerEngineer.html">كمكتب هندسي</a></li>
+                        </ul>
+                    </div>
+                    <a href="login.html" class="btn  me-2">تسجيل الدخول</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container  about-section">
+        <div class="row align-items-center  p-4">
+            <div class="col-md-8">
+                <h3 class="fw-bold mb-2 mb-md-5">من نحن؟</h3>
+                <p class="about-text">
+                    منصة رقمية متخصصة في قطاع المقاولات والخدمات اللوجستية، تهدف إلى تحسين عمليات إدارة المشاريع وتسهيل
+                    التواصل بين
+                    المقاولين والموردين والعملاء. توفر المنصة حلولًا مبتكرة لإدارة العقود، تتبع تقدم المشاريع، وتقديم
+                    العروض والمناقصات
+                    بكفاءة، مما يسهم في تحسين الإنتاجية وتقليل التكاليف التشغيلية
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="logo">
+                    <img src="assets/img/about-logo.png" alt="شعار الشركة">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container why-section">
+        <h2 class="fw-bold my-3 my-md-5">لماذا تعاهد؟</h2>
+        <div>
+
+            <div class="why-item row">
+                <div class="col-6">
+                    <div class="why-icon">
+                        <svg width="80" height="82" viewBox="0 0 102 106" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <ellipse opacity="0.1" cx="51.2325" cy="53.0005" rx="50.5001" ry="52.0786" fill="#510A98" />
+                            <ellipse opacity="0.2" cx="51.2326" cy="53.0391" rx="43.7668" ry="45.1348" fill="#510A98" />
+                            <ellipse opacity="0.3" cx="51.2324" cy="53.0777" rx="29.4023" ry="30.437" fill="#510A98" />
+                        </svg>
+                    </div>
+                    <div class="why-text">
+                        <div class="why-title">شفافية وجودة عالية</div>
+                        <div class="why-desc">نعتمد على معايير دقيقة لمراجعة وتقييم مقدمي الخدمات، مما يضمن لك التعامل
+                            مع محترفين
+                            موثوقين في جميع المشاريع.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-item row">
+                <div class="col-6">
+                    <div class="why-text">
+                        <div class="why-title">حلول متكاملة وسهلة الاستخدام</div>
+                        <div class="why-desc">نوفر لك منصة متكاملة تربط بين المقاولين، المكاتب الهندسية، والعمال بكل
+                            سهولة، مما يضمن
+                            تجربة سلسة واحترافية.</div>
+                    </div>
+                    <div class="why-icon">
+                        <svg width="80" height="82" viewBox="0 0 102 106" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <ellipse opacity="0.1" cx="51.2325" cy="53.0005" rx="50.5001" ry="52.0786" fill="#510A98" />
+                            <ellipse opacity="0.2" cx="51.2326" cy="53.0391" rx="43.7668" ry="45.1348" fill="#510A98" />
+                            <ellipse opacity="0.3" cx="51.2324" cy="53.0777" rx="29.4023" ry="30.437" fill="#510A98" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-item row">
+                <div class="col-6">
+                    <div class="why-icon">
+                        <svg width="80" height="82" viewBox="0 0 102 106" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <ellipse opacity="0.1" cx="51.2325" cy="53.0005" rx="50.5001" ry="52.0786" fill="#510A98" />
+                            <ellipse opacity="0.2" cx="51.2326" cy="53.0391" rx="43.7668" ry="45.1348" fill="#510A98" />
+                            <ellipse opacity="0.3" cx="51.2324" cy="53.0777" rx="29.4023" ry="30.437" fill="#510A98" />
+                        </svg>
+                    </div>
+                    <div class="why-text">
+                        <div class="why-title">سرعة في الإنجاز والتواصل الفعّال</div>
+                        <div class="why-desc">بفضل نظام البحث الذكي والتوصيات الفورية، يمكنك العثور على أفضل الحلول
+                            والتواصل المباشر
+                            مع مزودي الخدمة بكل مرونة.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services container text-center ">
+        <h2 class="mb-4 "> أبرز<strong> الخدمات</strong> التي نقدمها</h2>
+
+        <div class="row mt-4 justify-content-center">
+
+            <div class="col-12 col-md-4 d-flex justify-content-center  p-2">
+                <div
+                    class="bg-white p-md-3 p-2 service-card  d-flex flex-column justify-content-between align-items-center">
+                    <h5 class="fw-bold">تقييم المقاولين</h5>
+                    <p>تمكين العملاء من الوصول إلى مقاولين مؤهلين عبر نظام تصنيف وتقييم يعتمد على الأداء السابق وآراء
+                        العملاء.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center p-2">
+                <div
+                    class="bg-white p-md-3 p-2 service-card  d-flex flex-column justify-content-between align-items-center">
+                    <h5 class="fw-bold">الربط بين العملاء والمقاولين</h5>
+                    <p>تيسير التواصل والتعاقد بين أصحاب المشاريع والمقاولين الموثوقين، مع ضمان الشفافية والموثوقية.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center p-2">
+                <div
+                    class="bg-white p-md-3 p-2 service-card  d-flex flex-column justify-content-between align-items-center">
+                    <h5 class="fw-bold">الربط بين العملاء والمقاولين</h5>
+                    <p>تيسير التواصل والتعاقد بين أصحاب المشاريع والمقاولين الموثوقين، مع ضمان الشفافية والموثوقية.</p>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center p-2">
+                <div
+                    class="bg-white p-md-3 p-2 service-card  d-flex flex-column justify-content-between align-items-center">
+                    <h5 class="fw-bold">واجهة مستخدم سلسة وسهلة الاستخدام</h5>
+                    <p> تصميم المنصة بطريقة تضمن تجربة استخدام مريحة وسهلة، مما يمكّن جميع العملاء والمقاولين من التفاعل
+                        معها بكفاءة دون تعقيد</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center p-2">
+                <div
+                    class="bg-white p-md-3 p-2 service-card  d-flex flex-column justify-content-between align-items-center">
+                    <h5 class="fw-bold">توفير وسائل دفع مرنة وآمنة</h5>
+                    <p>تتيح المنصة خيارات دفع متنوعة وآمنة، مما يسهل على العملاء إتمام معاملاتهم المالية بكل راحة وثقة.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="stats-sectionForAbout  ">
+        <h2 class="mb-4">أحدث <strong> الإحصائيات</strong></h2>
+        <div class="stats-sectionForAboutBackground mx-md-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-3 mb-3">
+                        <div class="stats-box d-flex justify-content-center align-items-center">
+                            <img src="assets/img/stats.png" alt="مشاريع مفتوحة">
+                            <div class="stats_content mx-2">
+                                <p class="mb-0  text-nowrap">مشاريع مفتوحة</p>
+                                <h5 class="fw-bold">13,000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-6 col-md-3 mb-3">
+                        <div class="stats-box  d-flex justify-content-center align-items-center">
+                            <img src="assets/img/stats1.png" alt="مقاولين">
+                            <div class="stats_content mx-2">
+                                <p class="mb-0  text-nowrap">مقاولين</p>
+                                <h5 class="fw-bold">7,015,771</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-6 col-md-3 mb-3">
+                        <div class="stats-box  d-flex justify-content-center align-items-center">
+                            <img class="w-25" src="assets/img/stats2.png" alt="مشروع مكتمل">
+                            <div class="stats_content mx-2 text-nowrap">
+                                <p class="mb-0 ">مشاريع مكتملة</p>
+                                <h5 class="fw-bold">25,000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-3">
+                        <div class="stats-box  d-flex justify-content-center align-items-center">
+                            <img class="w-25" src="assets/img/stats3.png" alt="مبنى">
+                            <div class="stats_content mx-2 text-nowrap">
+                                <p class="mb-0 ">مزودي الخدمات</p>
+                                <h5 class="fw-bold">2500</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container contact-section mb-5 px-1 px-md-0">
+        <h2 class="text-center fw-bold">تواصل معنا</h2>
+        <div class="row mt-4 w-100 mx-auto ">
+            <div class="col-md-6 d-flex  ">
+
+                <div class="contact-box p-4 my-2 d-flex flex-column  justify-content-around w-100">
+                    <h5 class="contact-box-title">تواصل معنا”</h5>
+                    <div>
+                        <h3 class=" contact-box-h3 fw-bold mb-3">استفد من خبرتنا</h3>
+                        <p class="contact-box-p">واحصل على الدعم والإرشاد الذي يحتاجه مشروعك. اتصل بنا اليوم
+                            للبدء في الحصول على المشورة الاستشارية التي تساعدك في نجاح
+                            مشاريعك.</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.669922" y="0.505859" width="39" height="39" rx="9.5" stroke="#F0F0F0" />
+                            <path
+                                d="M11.8369 15.8027L16.1651 18.6882C16.4148 18.8547 16.5397 18.9379 16.6747 18.9969C16.7946 19.0492 16.9203 19.0873 17.0491 19.1102C17.1942 19.1361 17.3442 19.1361 17.6443 19.1361H22.6962C22.9963 19.1361 23.1463 19.1361 23.2914 19.1102C23.4202 19.0873 23.5458 19.0492 23.6657 18.9969C23.8008 18.9379 23.9257 18.8547 24.1754 18.6882L28.5036 15.8027M15.8369 26.6361H24.5036C25.9037 26.6361 26.6038 26.6361 27.1385 26.3636C27.6089 26.1239 27.9914 25.7415 28.2311 25.2711C28.5036 24.7363 28.5036 24.0362 28.5036 22.6361V17.3027C28.5036 15.9026 28.5036 15.2025 28.2311 14.6678C27.9914 14.1974 27.6089 13.8149 27.1385 13.5752C26.6038 13.3027 25.9037 13.3027 24.5036 13.3027H15.8369C14.4368 13.3027 13.7367 13.3027 13.2019 13.5752C12.7315 13.8149 12.3491 14.1974 12.1094 14.6678C11.8369 15.2025 11.8369 15.9026 11.8369 17.3027V22.6361C11.8369 24.0362 11.8369 24.7363 12.1094 25.2711C12.3491 25.7415 12.7315 26.1239 13.2019 26.3636C13.7367 26.6361 14.4368 26.6361 15.8369 26.6361Z"
+                                stroke="#21B698" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <p class="d-flex flex-column gap-2 m-0"> <strong>البريد الإلكتروني:</strong> <a
+                                href="mailto:Taahud@outlook.sa">Taahud@outlook.sa</a>
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.669922" y="0.509766" width="39" height="39" rx="9.5" stroke="#F0F0F0" />
+                            <mask id="mask0_1_22026" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10"
+                                y="10" width="21" height="21">
+                                <path d="M30.1699 10.4727H10.1699V30.4727H30.1699V10.4727Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_1_22026)">
+                                <path
+                                    d="M26.8366 18.806V12.9727M22.6699 18.806V12.9727M18.6924 22.0252C17.6911 21.0239 16.9005 19.8917 16.3205 18.6837C16.2706 18.5798 16.2456 18.5278 16.2265 18.4621C16.1584 18.2284 16.2073 17.9416 16.349 17.7437C16.3888 17.688 16.4365 17.6404 16.5317 17.5451C16.8231 17.2538 16.9687 17.1081 17.064 16.9617C17.4231 16.4092 17.4231 15.6971 17.064 15.1447C16.9687 14.9982 16.8231 14.8525 16.5317 14.5612L16.3693 14.3988C15.9265 13.9559 15.705 13.7345 15.4672 13.6142C14.9942 13.375 14.4357 13.375 13.9627 13.6142C13.7249 13.7345 13.5035 13.9559 13.0606 14.3988L12.9292 14.5302C12.4879 14.9715 12.2672 15.1922 12.0987 15.4922C11.9117 15.8251 11.7772 16.3422 11.7783 16.7241C11.7793 17.0682 11.8461 17.3034 11.9796 17.7737C12.6971 20.3016 14.0508 22.6869 16.0408 24.6769C18.0308 26.6669 20.4161 28.0206 22.9439 28.7381C23.4143 28.8716 23.6494 28.9383 23.9936 28.9394C24.3754 28.9405 24.8925 28.806 25.2254 28.619C25.5254 28.4505 25.7461 28.2298 26.1875 27.7885L26.3188 27.6571C26.7617 27.2142 26.9831 26.9928 27.1034 26.755C27.3426 26.282 27.3426 25.7234 27.1034 25.2505C26.9831 25.0127 26.7617 24.7912 26.3188 24.3484L26.1564 24.186C25.8651 23.8946 25.7194 23.749 25.573 23.6537C25.0205 23.2946 24.3084 23.2946 23.756 23.6537C23.6095 23.749 23.4638 23.8946 23.1725 24.186C23.0772 24.2812 23.0296 24.3289 22.9739 24.3687C22.7761 24.5104 22.4892 24.5593 22.2556 24.4912C22.1898 24.4721 22.1379 24.4471 22.034 24.3972C20.8259 23.8172 19.6938 23.0266 18.6924 22.0252Z"
+                                    stroke="#21B698" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+
+                        <p class="d-flex flex-column gap-2 m-0"><strong>رقم الاتصال:</strong> <a
+                                href="tel:+966530683668">0530683668</a></p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.669922" y="0.509766" width="39" height="39" rx="9.5" stroke="#F0F0F0" />
+                            <path
+                                d="M20.1696 28.3053C21.0029 24.1386 26.8362 23.6539 26.8362 18.3053C26.8362 14.6234 23.8515 11.6387 20.1696 11.6387C16.4877 11.6387 13.5029 14.6234 13.5029 18.3053C13.5029 23.6539 19.3363 24.1386 20.1696 28.3053Z"
+                                stroke="#21B698" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M20.1699 20.8066C21.5506 20.8066 22.6699 19.6874 22.6699 18.3066C22.6699 16.9259 21.5506 15.8066 20.1699 15.8066C18.7892 15.8066 17.6699 16.9259 17.6699 18.3066C17.6699 19.6874 18.7892 20.8066 20.1699 20.8066Z"
+                                stroke="#21B698" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <p class="d-flex flex-column gap-2 m-0"><strong>العنوان:</strong> <a
+                                href="https://www.google.com/maps/search/?q=جازان، حي الشاطئ طريق الأمير محمد بن ناصر"
+                                target="_blank">
+                                جازان، حي الشاطئ طريق الأمير محمد بن ناصر
+                            </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="contact-box p-4 my-2 w-100">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">الاسم</label>
+                            <div class="form-control">
+                                <svg width="19" height="21" viewBox="0 0 19 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.1699 19.5723C17.1699 18.1767 17.1699 17.4789 16.9977 16.9111C16.6099 15.6327 15.6094 14.6323 14.331 14.2445C13.7632 14.0723 13.0655 14.0723 11.6699 14.0723H6.66992C5.27436 14.0723 4.57657 14.0723 4.00878 14.2445C2.73037 14.6323 1.72996 15.6327 1.34216 16.9111C1.16992 17.4789 1.16992 18.1767 1.16992 19.5723M13.6699 6.07227C13.6699 8.55755 11.6552 10.5723 9.16992 10.5723C6.68464 10.5723 4.66992 8.55755 4.66992 6.07227C4.66992 3.58699 6.68464 1.57227 9.16992 1.57227C11.6552 1.57227 13.6699 3.58699 13.6699 6.07227Z"
+                                        stroke="#27D9B5" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <input type="text" placeholder="الاسم">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">رقم الجوال</label>
+                            <div class="form-control">
+                                <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5502 8.03499C7.24619 9.48461 8.19498 10.8433 9.39656 12.0449C10.5981 13.2465 11.9568 14.1952 13.4064 14.8912C13.5311 14.9511 13.5934 14.981 13.6723 15.004C13.9527 15.0858 14.2969 15.0271 14.5343 14.8571C14.6012 14.8092 14.6583 14.7521 14.7726 14.6377C15.1222 14.2881 15.297 14.1133 15.4728 13.9991C16.1357 13.5681 16.9903 13.5681 17.6532 13.9991C17.829 14.1133 18.0038 14.2881 18.3534 14.6377L18.5482 14.8326C19.0797 15.3641 19.3454 15.6298 19.4897 15.9152C19.7768 16.4827 19.7768 17.153 19.4897 17.7205C19.3454 18.0059 19.0797 18.2715 18.5482 18.803L18.3906 18.9606C17.861 19.4902 17.5962 19.7551 17.2361 19.9573C16.8366 20.1817 16.2161 20.3431 15.7579 20.3417C15.345 20.3405 15.0627 20.2605 14.4983 20.1003C11.4649 19.2393 8.60256 17.6148 6.21458 15.2269C3.8266 12.8389 2.20213 9.97647 1.34116 6.94308C1.18095 6.37863 1.10085 6.09641 1.09962 5.68346C1.09825 5.22524 1.25961 4.60475 1.48403 4.20524C1.68628 3.84521 1.95109 3.5804 2.48072 3.05077L2.63835 2.89314C3.16979 2.3617 3.43552 2.09598 3.7209 1.95163C4.28846 1.66456 4.95872 1.66456 5.52628 1.95163C5.81166 2.09598 6.07739 2.3617 6.60883 2.89314L6.8037 3.08801C7.1533 3.43762 7.32811 3.61242 7.44239 3.7882C7.87339 4.45109 7.87339 5.30567 7.44239 5.96856C7.32811 6.14434 7.1533 6.31914 6.8037 6.66874C6.68939 6.78306 6.63223 6.84021 6.58439 6.90702C6.41438 7.14445 6.35568 7.48871 6.4374 7.76907C6.4604 7.84796 6.49033 7.9103 6.5502 8.03499Z"
+                                        stroke="#27D9B5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <input type="text" placeholder="رقم الجوال">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">البريد الإلكتروني</label>
+                            <div class="form-control">
+                                <svg width="23" height="19" viewBox="0 0 23 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.16992 4.79297L9.33482 10.5084C9.99602 10.9713 10.3266 11.2027 10.6862 11.2923C11.0038 11.3715 11.336 11.3715 11.6536 11.2923C12.0132 11.2027 12.3438 10.9713 13.005 10.5084L21.1699 4.79297M5.96992 17.793H16.3699C18.0501 17.793 18.8901 17.793 19.5319 17.466C20.0964 17.1784 20.5553 16.7194 20.8429 16.155C21.1699 15.5132 21.1699 14.6731 21.1699 12.993V6.59297C21.1699 4.91281 21.1699 4.07273 20.8429 3.431C20.5553 2.86651 20.0964 2.40757 19.5319 2.11995C18.8901 1.79297 18.0501 1.79297 16.3699 1.79297H5.96992C4.28976 1.79297 3.44968 1.79297 2.80795 2.11995C2.24346 2.40757 1.78452 2.86651 1.4969 3.431C1.16992 4.07273 1.16992 4.91281 1.16992 6.59297V12.993C1.16992 14.6731 1.16992 15.5132 1.4969 16.155C1.78452 16.7194 2.24346 17.1784 2.80795 17.466C3.44968 17.793 4.28976 17.793 5.96992 17.793Z"
+                                        stroke="#27D9B5" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <input type="email" placeholder="البريد الإلكتروني">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-control">
+                                <textarea rows="4" class="w-100" placeholder="اكتب رسالتك هنا..."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-submit w-100">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top row">
+                <div class="footer-column col-md-4 col-12 pb-3 ">
+                    <div class="">
+                        <img src="assets/img/footerlogo.png" alt="">
+                        <p>
+                            تعاهد هي منصة رقمية موثوقة تعمل كحلقة وصل بين طالب الخدمة ومقدمها في قطاع المقاولات. نسعى
+                            لتبسيط عملية البحث والاختيار
+                            بين المقاولين والعمال من خلال تقديم حلول مبتكرة تجمع كافة الخدمات في مكان واحد. بفضل تعاهد،
+                            يصبح اختيار المقاول العقاري
+                            أسهل وأكثر راحة، مما يضمن تجربة احترافية وآمنة لجميع الأطراف المعنية
+                        </p>
+                    </div>
+                    <div class="d-flex d-md-block align-items-center gap-3 justify-content-center">
+                        <div class="media">
+                            <div class="con_soc">
+                                <a href="#" data-color="#1877F2" class=" faq-button ">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span class="tooltip">facebook</span>
+                                </a>
+
+                                <a href="#" data-color="#1da1f2" class="faq-button">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                    <span class="tooltip">twitter</span>
+                                </a>
+
+                                <a href="#" data-color="#FF0069" class="faq-button">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span class="tooltip">instagram</span>
+                                </a>
+                                <a href="#" data-color="#FFFC00" class="faq-button ">
+                                    <i class="fa-brands fa-snapchat"></i>
+                                    <span class="tooltip">Snapchat</span>
+                                </a>
+                                <a href="#" data-color="#FF0000" class="faq-button ">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    <span class="tooltip">YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer-column col-md-2 col-4">
+                    <ul>
+                        <h3>روابط هامة</h3>
+                        <li><a href="#">المقاولين </a></li>
+                        <li><a href="#"> المشاريع</a></li>
+                        <li><a href="#">مزودي الخدمات</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">الاسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column col-md-2 col-8">
+                    <div>
+                        <h3>تعرف علينا</h3>
+                        <ul>
+                            <li><a href="#">الشركة</a></li>
+                            <li><a href="#">كن شريكا معنا</a></li>
+                            <li><a href="#">سياسة الخصوصية</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>حمل التطبيق</h3>
+                        <p>15% تخفيض للمستخدمين الجدد</p>
+                        <div class="app-buttons">
+                            <div class="app_btn">
+                                <a> google play <i class="fa-brands fa-google-play"></i></a>
+                                <a> app store <i class="fa-brands fa-apple"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column col-md-4 col-12 footer-column_end  flex-row flex-md-column ">
+                    <div class="contact">
+                        <h3>تواصل معنا</h3>
+                        <ul>
+                            <li class="d-flex  align-items-center gap-3">
+                                <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_200_3669" style="mask-type:luminance" maskUnits="userSpaceOnUse"
+                                        x="0" y="0" width="20" height="20">
+                                        <path d="M19.0026 0.666748H0.335938V19.3334H19.0026V0.666748Z" fill="white" />
+                                    </mask>
+                                    <g mask="url(#mask0_200_3669)">
+                                        <path
+                                            d="M1.89062 6.11117L8.24112 10.5565C8.75537 10.9165 9.01249 11.0965 9.29217 11.1662C9.53921 11.2278 9.79759 11.2278 10.0446 11.1662C10.3243 11.0965 10.5814 10.9165 11.0957 10.5565L17.4462 6.11117M5.62396 16.2223H13.7128C15.0196 16.2223 15.673 16.2223 16.1721 15.968C16.6112 15.7443 16.9681 15.3873 17.1918 14.9483C17.4462 14.4491 17.4462 13.7957 17.4462 12.4889V7.51117C17.4462 6.20438 17.4462 5.55098 17.1918 5.05185C16.9681 4.61281 16.6112 4.25585 16.1721 4.03215C15.673 3.77783 15.0196 3.77783 13.7128 3.77783H5.62396C4.31717 3.77783 3.66378 3.77783 3.16465 4.03215C2.72561 4.25585 2.36864 4.61281 2.14494 5.05185C1.89062 5.55098 1.89062 6.20438 1.89062 7.51117V12.4889C1.89062 13.7957 1.89062 14.4491 2.14494 14.9483C2.36864 15.3873 2.72561 15.7443 3.16465 15.968C3.66378 16.2223 4.31717 16.2223 5.62396 16.2223Z"
+                                            stroke="#31184A" stroke-width="1.55556" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                                <div>
+                                    <p class="m-0">البريد الالكتروني</p>
+                                    <a href="">Taahud@outlook.sa</a>
+                                </div>
+                            </li>
+                            <li class="d-flex  align-items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.85458 7.55253C7.39591 8.68001 8.13386 9.73673 9.06842 10.6713C10.003 11.6059 11.0597 12.3438 12.1872 12.8851C12.2841 12.9317 12.3326 12.955 12.394 12.9729C12.612 13.0364 12.8798 12.9908 13.0645 12.8585C13.1164 12.8213 13.1609 12.7769 13.2498 12.688C13.5217 12.416 13.6577 12.2801 13.7944 12.1912C14.31 11.856 14.9746 11.856 15.4902 12.1912C15.6269 12.2801 15.7629 12.416 16.0348 12.688L16.1864 12.8395C16.5997 13.2529 16.8064 13.4595 16.9187 13.6815C17.1419 14.1229 17.1419 14.6443 16.9187 15.0857C16.8064 15.3077 16.5997 15.5143 16.1864 15.9277L16.0638 16.0503C15.6518 16.4622 15.4459 16.6682 15.1659 16.8255C14.8551 17 14.3725 17.1255 14.0161 17.1245C13.695 17.1235 13.4754 17.0612 13.0364 16.9366C10.6771 16.267 8.45086 15.0035 6.59354 13.1462C4.73623 11.2888 3.47275 9.06257 2.8031 6.70326C2.6785 6.26424 2.61619 6.04474 2.61524 5.72356C2.61418 5.36716 2.73968 4.88456 2.91423 4.57383C3.07154 4.2938 3.2775 4.08784 3.68943 3.67591L3.81203 3.55331C4.22538 3.13996 4.43205 2.93329 4.65401 2.82102C5.09545 2.59775 5.61677 2.59775 6.0582 2.82102C6.28017 2.93329 6.48684 3.13996 6.90018 3.55331L7.05175 3.70487C7.32366 3.97679 7.45962 4.11275 7.54851 4.24946C7.88373 4.76504 7.88373 5.42972 7.54851 5.9453C7.45962 6.08201 7.32366 6.21797 7.05175 6.48989C6.96284 6.5788 6.91838 6.62325 6.88117 6.67522C6.74894 6.85988 6.70329 7.12764 6.76685 7.34569C6.78474 7.40705 6.80802 7.45555 6.85458 7.55253Z"
+                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div>
+                                    <p class="m-0">رقم الاتصال</p>
+                                    <a href="">0530683668</a>
+                                </div>
+                            </li>
+                            <li class="d-flex  align-items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.66927 10.3891C10.958 10.3891 12.0026 9.34441 12.0026 8.05575C12.0026 6.76708 10.958 5.72241 9.66927 5.72241C8.38061 5.72241 7.33594 6.76708 7.33594 8.05575C7.33594 9.34441 8.38061 10.3891 9.66927 10.3891Z"
+                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.66949 17.778C11.225 14.6669 15.8917 12.6589 15.8917 8.44463C15.8917 5.0082 13.1059 2.22241 9.66949 2.22241C6.23305 2.22241 3.44727 5.0082 3.44727 8.44463C3.44727 12.6589 8.11394 14.6669 9.66949 17.778Z"
+                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div>
+                                    <p class="m-0">العنوان</p>
+                                    <a href="">جازان، حي الشاطئ طريق الأمير محمد بن ناصر</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex justify-content-between px-5 align-items-center flex-md-row flex-column">
+            <p class="copyright  m-0">جميع الحقوق محفوظة تعاهد <span id="Copy_year"></span> &copy;</p>
+
+            <div class="payment-methods">
+                <img src="assets/img/tabby.png" alt="Tabby">
+                <img src="assets/img/tamara.png" alt="Tamara">
+                <img src="assets/img/visa.png" alt="Visa">
+                <img src="assets/img/applePAy.png" alt="Apple Pay">
+                <img src="assets/img/Mada_Logo.png" alt="Mada">
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
