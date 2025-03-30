@@ -324,90 +324,145 @@ if (document.querySelector(".date-container")) {
   });
 }
 // fileUpload
-if (document.querySelector(".fileUpload")) {
-if (document.querySelector(".fileUpload")) {
-  document.body.addEventListener("change", function (event) {
-    if (event.target.matches('input[type="file"]')) {
-      const fileInput = event.target;
-      const file = fileInput.files[0];
-      const uploadText = fileInput
-        .closest(".upload-container")
-        .querySelector(".upload-text");
+// if (document.querySelector(".fileUpload")) {
+//   if (document.querySelector(".fileUpload")) {
+//     document.body.addEventListener("change", function (event) {
+//       if (event.target.matches('input[type="file"]')) {
+//         const fileInput = event.target;
+//         const file = fileInput.files[0];
+//         const uploadText = fileInput
+//           .closest(".upload-container")
+//           .querySelector(".upload-text");
 
-      if (file) {
-        const fileName = file.name.toLowerCase();
-        const fileType = file.type;
-        let allowedExtensions = [];
+//         if (file) {
+//           const fileName = file.name.toLowerCase();
+//           const fileType = file.type;
+//           let allowedExtensions = [];
 
-        // تحديد الأنواع بناءً على الـ id
-        switch (fileInput.id) {
-          case "fileLease":
-            allowedExtensions = ["image/png" ,"image/jpg"];
-            break;
-          case "file_Employment_contract":
-            allowedExtensions = [
-              "application/pdf",
-              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            ]; // تصحيح امتداد docx
-            break;
-          case "file_Purchase_Contract":
-            allowedExtensions = ["application/pdf", "image/jpeg"]; // تصحيح امتداد jpg إلى jpeg
-            break;
-        }
+//           // تحديد الأنواع بناءً على الـ id
+//           switch (fileInput.id) {
+//             case "fileLease":
+//               allowedExtensions = ["image/png", "image/jpg"];
+//               break;
+//             case "file_Employment_contract":
+//               allowedExtensions = [
+//                 "application/pdf",
+//                 "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+//               ]; // تصحيح امتداد docx
+//               break;
+//             case "file_Purchase_Contract":
+//               allowedExtensions = ["application/pdf", "image/jpeg"]; // تصحيح امتداد jpg إلى jpeg
+//               break;
+//           }
 
-        // التحقق من النوع
-        const isValid = allowedExtensions.some(
-          (ext) => fileType === ext || fileName.endsWith(ext.split("/").pop())
+//           // التحقق من النوع
+//           const isValid = allowedExtensions.some(
+//             (ext) => fileType === ext || fileName.endsWith(ext.split("/").pop())
+//           );
+
+//           if (!isValid) {
+//             alert("نوع الملف غير مسموح!");
+//             fileInput.value = ""; // مسح الملف المختار
+//           } else {
+//             uploadText.textContent = fileName; // تحديث اسم الملف فقط إذا كان مسموحًا
+//           }
+//         }
+//       }
+//     });
+//   }
+// }
+// fileUpload
+
+if (document.querySelector(".upload-box")) {
+  function handleFiles(files) {
+    const fileList = document.getElementById("fileList");
+    const maxFileSize = 10000 * 1024 * 1024; // 10MB بالبايت
+    // قائمة الامتدادات المسموح بها
+    const allowedExtensions = ["pdf", "doc", "docx", "jpg", "jpeg", "png"];
+
+    Array.from(files).forEach((file) => {
+      let fileExtension = file.name.split(".").pop().toLowerCase();
+      let fileSize = (file.size / 1024 / 1024).toFixed(2); // تحويل الحجم إلى MB
+
+      // التحقق من نوع الملف
+      if (!allowedExtensions.includes(fileExtension)) {
+        alert(
+          `❌ الملف "${file.name}" غير مسموح به! يُسمح فقط بـ PDF, DOC, DOCX , JPG, JPEG, PNG.`
         );
-
-        if (!isValid) {
-          alert("نوع الملف غير مسموح!");
-          fileInput.value = ""; // مسح الملف المختار
-          
-        } else {
-          uploadText.textContent = fileName; // تحديث اسم الملف فقط إذا كان مسموحًا
-        }
+        return; // الخروج ومنع الإضافة
       }
-    }
-  });
-}
 
-}
-
-// Filter
-if (document.getElementById("filter")) {
-  document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("filter");
-    const openSidebar = document.getElementById("openFilter");
-    const closeSidebar = document.getElementById("closeFilter");
-
-    // فتح السايدبار
-    openSidebar.addEventListener("click", function (event) {
-      event.stopPropagation(); // عشان الضغط على الزرار نفسه ميقفلهاش
-      sidebar.classList.toggle("open");
-      document.body.classList.add("overflow-hidden");
-    });
-
-    // إغلاق السايدبار بالزرار
-    closeSidebar.addEventListener("click", function () {
-      sidebar.classList.remove("open");
-      document.body.classList.remove("overflow-hidden");
-    });
-
-    // إغلاق السايدبار عند الضغط خارجها
-    document.addEventListener("click", function (event) {
-      if (
-        !sidebar.contains(event.target) &&
-        !openSidebar.contains(event.target)
-      ) {
-        sidebar.classList.remove("open");
-        document.body.classList.remove("overflow-hidden");
+      // التحقق من حجم الملف
+      if (file.size > maxFileSize) {
+        alert(
+          `❌ الملف "${file.name}" كبير جدًا! الحد الأقصى المسموح به هو 10MB.`
+        );
+        return; // الخروج ومنع الإضافة
       }
-    });
 
-    // منع إغلاقها لو ضغطت جواها
-    sidebar.addEventListener("click", function (event) {
-      event.stopPropagation();
+      // تحديد الأيقونة المناسبة
+      let iconClass =
+        fileExtension === "pdf"
+          ? "fa-solid fa-file-pdf text-danger"
+          : ["jpg", "jpeg", "png", "gif", "webp"].includes(fileExtension)
+          ? "fa-solid fa-file-image text-primary"
+          : ["doc", "docx"].includes(fileExtension)
+          ? "fa-solid fa-file-word text-primary"
+          : "fa-solid fa-file text-secondary";
+
+      // إنشاء العنصر الخاص بالملف
+      let fileItem = document.createElement("div");
+      fileItem.classList.add("file-item");
+      fileItem.classList.add("col-12");
+      fileItem.classList.add("col-md-5");
+      fileItem.innerHTML = `
+            <div class="file-info">
+                <i class="${iconClass} file-icon"></i>
+                <div>
+                    <p class="m-0 nameOfFile">${file.name}</p>
+                    <div class="d-flex gap-3 align-items-center">
+                        <small class="text-muted">${fileSize} ميجا</small>
+                        <p class="m-0  status-text d-flex gap-1 align-items-center " data-status> <i class="fa-solid fa-spinner"></i> جاري الرفع...</p>
+                    </div>
+                    </div>
+                    <button class="delete-btn" onclick="this.parentElement.remove()">
+                        <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                        <div class="progress mt-1">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-progress></div>
+                        </div>
+        `;
+
+      fileList.appendChild(fileItem);
+
+      // تحديد العناصر داخل العنصر الجديد
+      let progressBar = fileItem.querySelector("[data-progress]");
+      let statusText = fileItem.querySelector("[data-status]");
+
+      simulateUpload(file, progressBar, statusText);
     });
-  });
+  }
+
+  function simulateUpload(file, progressBar, statusText) {
+    let reader = new FileReader();
+
+    reader.onloadstart = () => {
+      progressBar.style.width = "0%";
+    };
+
+    reader.onprogress = (event) => {
+      if (event.lengthComputable) {
+        let percent = (event.loaded / event.total) * 100;
+        progressBar.style.width = percent + "%";
+      }
+    };
+
+    reader.onloadend = () => {
+      progressBar.style.width = "100%";
+      statusText.innerHTML = `<span class = "d-flex gap-1 align-items-center"> <i class="fa-solid fa-check"></i> مكتمل</span>`;
+    };
+
+    reader.readAsDataURL(file); // قراءة الملف لمحاكاة الرفع
+  }
 }
