@@ -478,7 +478,7 @@ body section {
 }
 .status-fillter {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 4px 8px;
   font-size: 14px;
   background: #f1f1f6;
   border-radius: 8px;
@@ -552,8 +552,8 @@ body section {
   overflow: hidden;
 }
 .serviceProvider-box .con_img img {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
 }
 /* end Contractor-login  */
 
@@ -1419,8 +1419,8 @@ input[type="checkbox"] {
 }
 .verified-badge {
   position: absolute;
-  bottom: 15px;
-  right: 5px;
+  bottom: 0;
+  right: 0;
   width: 30px;
 }
 .company-name {
@@ -1434,7 +1434,6 @@ input[type="checkbox"] {
 
 .companyTaps .nav {
   display: flex;
-  justify-content: space-evenly;
   padding: 0 0 20px;
   border: none;
   text-align: center;
