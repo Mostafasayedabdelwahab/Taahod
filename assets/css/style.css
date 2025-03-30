@@ -454,6 +454,7 @@ body section {
   border-radius: 18px;
   padding: 20px;
   box-shadow: var(--shadow--);
+  justify-content: space-between;
 }
 .project-box img {
   width: 50px;
