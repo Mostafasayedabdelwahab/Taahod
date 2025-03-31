@@ -376,7 +376,7 @@ if (document.querySelector(".date-container")) {
 if (document.querySelector(".upload-box")) {
   function handleFiles(files) {
     const fileList = document.getElementById("fileList");
-    const maxFileSize = 10000 * 1024 * 1024; // 10MB بالبايت
+    const maxFileSize = 10 * 1024 * 1024; // 10MB بالبايت
     // قائمة الامتدادات المسموح بها
     const allowedExtensions = ["pdf", "doc", "docx", "jpg", "jpeg", "png"];
 
@@ -418,7 +418,7 @@ if (document.querySelector(".upload-box")) {
       fileItem.innerHTML = `
             <div class="file-info">
                 <i class="${iconClass} file-icon"></i>
-                <div>
+                <div class = "overflow-hidden" >
                     <p class="m-0 nameOfFile">${file.name}</p>
                     <div class="d-flex gap-3 align-items-center">
                         <small class="text-muted">${fileSize} ميجا</small>
