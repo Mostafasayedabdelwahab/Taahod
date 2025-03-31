@@ -1753,12 +1753,7 @@ input[type="checkbox"] {
   margin-bottom: 10px;
   transition: 0.3s;
 }
-.nameOfFile {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+
 .file-item:hover {
   transform: scale(1.02);
 }
@@ -1766,6 +1761,7 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 .file-icon {
   font-size: 24px;
