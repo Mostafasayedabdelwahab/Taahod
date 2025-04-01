@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Swiper;
-  if (document.querySelector(".mySwiper")) {
+  if (document.querySelector(".swiper")) {
     import("./mySwiper.js").then((module) => module.initSwiperes());
   }
 
