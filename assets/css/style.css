@@ -11,12 +11,17 @@
 .text-align-right {
   text-align: right;
 }
+.text-align-left {
+  text-align: left;
+}
 
 .phoneCon.flagenglish .iti__flag-container {
   left: auto !important;
   right: 0;
 }
-
+.textMainColor {
+  color: var(--main-color--);
+}
 .paddingInput {
   padding-left: 5px !important;
   padding-right: 95px !important;
@@ -216,8 +221,8 @@ header .dropdown-item:hover {
 .hero-title {
   font-weight: 700;
   font-size: 35px;
-  line-height: 100%;
   color: var(--Text-color--);
+  line-height: 1.5;
 }
 .hero-text {
   color: #333;
@@ -228,8 +233,8 @@ header .dropdown-item:hover {
 .hero-text p {
   margin: 0;
 }
+.hero-content strong,
 .hero-text strong {
-  font-size: 20px;
   color: var(--main-color--);
 }
 .hero-btn {
@@ -353,6 +358,12 @@ header .dropdown-item:hover {
 .login-service-btn:hover {
   background: #541aba;
 }
+
+
+.login-serviceForUser h1 {
+  font-size: 30px;
+}
+
 @media (max-width: 991px) {
   .login-service .lead {
     font-size: 14px;
@@ -2615,15 +2626,90 @@ input[type="checkbox"] {
   display: none;
 }
 
-
 @media (max-width: 768px) {
-   .personSetup .login-section {
-        width: 100%;
-        padding: 10px
-    }
-    .input-group .input-group-text {
-       font-size: 11px;
+  .personSetup .login-section {
+    width: 100%;
+    padding: 10px;
+  }
+  .input-group .input-group-text {
+    font-size: 11px;
     padding: 5px;
-}
+  }
 }
 /* end personSetup */
+
+.review-sectionForUsers {
+  background-color: transparent;
+}
+
+.review-sectionForUsers .testimonial-card {
+  min-height: auto;
+  border: unset;
+}
+
+
+
+@media (min-width: 991px) {
+ .login-serviceForUser .login-service-content  {
+ position: relative;
+ top: -50px;
+}
+
+.login-service-content .search-box {
+ margin-top: 80px;
+}
+}
+
+
+
+.login-service-content .search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px !important;
+  border-radius: 60px;
+}
+
+.login-service-content .search-box select {
+  flex: 1;
+  min-width: 90px;
+  max-width: 90px;
+  border: none;
+}
+
+.login-service-content .search-box input {
+  flex: 2;
+  min-width: 80px;
+}
+.login-service-content h1 {
+       line-height: 1.5;
+    }
+@media (max-width: 768px) {
+  .review-sectionForUsers .testimonial-card {
+    padding: 20px 5px 5px;
+  }
+  .review-sectionForUsers .testimonial-card .userImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .login-service-content .search-box button {
+    padding: 0 ;
+    
+  }
+  .login-service-content .search-box select {
+  min-width: 75px;
+  max-width: 75px;
+  padding: 0;
+}
+}
+
+
+.service-cardForProf .userImg {
+     width:40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
