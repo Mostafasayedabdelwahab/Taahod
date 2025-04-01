@@ -50,8 +50,10 @@ export function initchatBox() {
     chatItems.forEach((item) => {
       if (item.textContent.toLowerCase().includes(searchValue)) {
         item.closest(".list-group-item").classList.add("d-flex");
+        item.closest(".list-group-item").classList.remove("d-none");
       } else {
         item.closest(".list-group-item").classList.add("d-none");
+        item.closest(".list-group-item").classList.remove("d-flex");
       }
     });
   });
