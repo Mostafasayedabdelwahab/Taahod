@@ -359,7 +359,6 @@ header .dropdown-item:hover {
   background: #541aba;
 }
 
-
 .login-serviceForUser h1 {
   font-size: 30px;
 }
@@ -2300,10 +2299,9 @@ input[type="checkbox"] {
   min-width: 40px;
 }
 
-
-.navForLogin  .nav-link {
-    color: var(--Text-color--);
-    font-weight: 400;
+.navForLogin .nav-link {
+  color: var(--Text-color--);
+  font-weight: 400;
 }
 
 .navForLogin .search-box .form-control,
@@ -2653,20 +2651,16 @@ input[type="checkbox"] {
   border: unset;
 }
 
-
-
 @media (min-width: 991px) {
- .login-serviceForUser .login-service-content  {
- position: relative;
- top: -50px;
-}
+  .login-serviceForUser .login-service-content {
+    position: relative;
+    top: -50px;
+  }
 
-.login-service-content .search-box {
- margin-top: 80px;
+  .login-service-content .search-box {
+    margin-top: 80px;
+  }
 }
-}
-
-
 
 .login-service-content .search-box {
   width: 100%;
@@ -2679,7 +2673,7 @@ input[type="checkbox"] {
 
 .login-service-content .search-box select {
   flex: 1;
-  min-width: 90px;
+  min-width: 115px;
   max-width: 90px;
   border: none;
 }
@@ -2689,8 +2683,8 @@ input[type="checkbox"] {
   min-width: 80px;
 }
 .login-service-content h1 {
-       line-height: 1.5;
-    }
+  line-height: 1.5;
+}
 @media (max-width: 768px) {
   .review-sectionForUsers .testimonial-card {
     padding: 20px 5px 5px;
@@ -2701,21 +2695,23 @@ input[type="checkbox"] {
     border-radius: 50%;
   }
   .login-service-content .search-box button {
-    padding: 0 ;
-    
+    padding: 0;
   }
   .login-service-content .search-box select {
-  min-width: 75px;
-  max-width: 75px;
-  padding: 0;
+    min-width: 105px;
+    max-width: 75px;
+    padding: 0;
+  }
 }
-}
-
 
 .service-cardForProf .userImg {
-     width:40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.fs-smaller {
+  font-size: 10px;
 }
