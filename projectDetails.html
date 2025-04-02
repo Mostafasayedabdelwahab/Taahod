@@ -233,22 +233,24 @@
                         </ul>
 
                         <h5>ارفق ملفات</h5>
-
-                        <div class="upload-box" onclick="document.getElementById('fileInput').click()">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="fa-solid fa-upload"></i>
-                                <div>
-                                    <p class="m-0"> <strong>ارفع الملفات</strong></p>
-                                    <p class="text-muted m-0">Pdf, Doc, Docx, Jpg,Jpeg, Png</p>
-                                    <p class="text-muted m-0">حد أقصى 10 ميجا للملف الواحد</p>
-
+                        <div class="upload-box-con">
+                            <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-solid fa-upload"></i>
+                                    <div>
+                                        <p class="m-0"> <strong>ارفع الملفات</strong></p>
+                                        <p class="text-muted m-0">Pdf, Doc, Docx, Jpg,Jpeg, Png</p>
+                                        <p class="text-muted m-0">حد أقصى 10 ميجا للملف الواحد</p>
+    
+                                    </div>
+                                    <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" multiple
+                                        hidden onchange="handleFiles(this.files)">
                                 </div>
-                                <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" multiple
-                                    hidden onchange="handleFiles(this.files)">
                             </div>
+    
+                            <div class="file-list mt-3 row gap-3 justify-content-center" id="fileList"></div>
                         </div>
 
-                        <div class="file-list mt-3 row gap-3 justify-content-center" id="fileList"></div>
 
                         <button type="submit" class="btn btn-submit w-100 mt-3 ">إرسال</button>
                     </form>
@@ -405,11 +407,8 @@
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script  src="assets/js/main.js"></script>
 
-    <script>
-
-    </script>
 </body>
 
 </html>
