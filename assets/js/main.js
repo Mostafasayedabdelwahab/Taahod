@@ -1,10 +1,9 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   // skillsForm;
   if (document.getElementById("skillsForm")) {
     import("./skillsForm.js").then((module) => module.initskillsForm());
   }
-  
+
   // تفعيل مكتبة intl-tel-input
   if (document.querySelector("#phoneWithCode")) {
     import("./intl-tel-input.js").then((module) => module.initintltelinput());
@@ -64,6 +63,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // عند اختيار تاريخ، يتم وضعه في input النصي
     dateInput.addEventListener("input", function () {
       textInput.value = dateInput.value;
+    });
+  }
+
+  if (document.getElementById("openFilter")) {
+    document.getElementById("openFilter").addEventListener("click", () => {
+      document.getElementById("filter").classList.add("open");
+    });
+    document.getElementById("closeFilter").addEventListener("click", () => {
+      document.getElementById("filter").classList.remove("open");
     });
   }
 });
