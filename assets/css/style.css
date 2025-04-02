@@ -2715,3 +2715,59 @@ input[type="checkbox"] {
 .fs-smaller {
   font-size: 10px;
 }
+
+
+
+    .stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 25px;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+.step .circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1.5px solid #d1d1d1;
+  color: #666;
+  background-color: #fff;
+}
+.step.active .circle {
+  background-color: var(--main-color--); /* لون البنفسجي */
+  color: white;
+}
+.step::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  background-color: #d1d1d1;
+  top: 18px;
+  left: 50%;
+  z-index: -1;
+}
+.step:first-child::before {
+  display: none;
+}
+
+.step span {
+  margin-top: 10px;
+  color: #666;
+  white-space: nowrap;
+}
+.step.active span {
+  font-weight: bold;
+  color: black;
+}
