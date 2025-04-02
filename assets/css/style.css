@@ -2300,6 +2300,12 @@ input[type="checkbox"] {
   min-width: 40px;
 }
 
+
+.navForLogin  .nav-link {
+    color: var(--Text-color--);
+    font-weight: 400;
+}
+
 .navForLogin .search-box .form-control,
 .navForLogin .search-box.form-control {
   background-color: transparent;
