@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعاهد</title>
+    <meta property="og:title" content="تعاهد" />
+    <meta property="og:description"
+        content="تعاهد هي منصة رقمية موثوقة تعمل كوسيط يجمع بين طالبي الخدمات ومقدميها في قطاع المقاولات. نهدف إلى تسهيل عمليات البحث، التعاقد، وتنفيذ المشاريع من خلال توفير بيئة آمنة واحترافية تجمع بين المقاولين، العمال، والمكاتب الهندسية." />
+    <meta property="og:image" content="/assets/img/logo.png" />
+    <!-- <meta property="og:url" content=" اكتب لينك الموقع https://tanafos.sa" /> -->
+    <meta property="og:type" content="websit" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+
+    <!-- استدعاء الخط  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body>
+    <nav class="navForLogin navbar navbar-expand-lg navbar-light  fixed-top">
+        <div class="container p-0">
+            <div class="d-flex boxForLogo">
+                <!-- اللوجو -->
+                <a class="navbar-brand" href="homeAfterLogin.html">
+                    <img src="assets/img/head-logo.png" alt="شعار">
+                </a>
+                <!-- روابط القائمة -->
+                <div class="collapse navbar-collapse order-1 order-lg-0 d-lg-flex justify-content-between w-100"
+                    id="navbarNav">
+                    <ul class="navbar-nav  p-0 mb-2 mb-lg-0">
+                        <li class="nav-item px-2 px-md-0"><a class="nav-link d-flex align-items-center gap-2"
+                                href="addProject.html"><i class="fa-solid fa-pen"></i> اضف مشروع</a></li>
+                        <li class="nav-item px-2 px-md-0"><a class="nav-link d-flex align-items-center gap-2"
+                                href="#"><i class="fa-solid fa-users"></i> ابحث عن مهندسين</a></li>
+                        <li class="nav-item px-2 px-md-0"><a class="nav-link" href="projects.html"><i
+                                    class="fa-solid fa-briefcase"></i>
+                                تصفح المشاريع</a></li>
+                    </ul>
+                    <!-- البحث مع فلترة -->
+                    <form class="search-box form-control p-0">
+
+                        <button class="btn" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input type="search" placeholder="بحث" aria-label="Search">
+                        <select class="form-control" aria-label="فلترة البحث">
+                            <option selected>مشاريع</option>
+                            <option value="1">مهندسين</option>
+                            <option value="2">شركات</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <!-- الإشعارات والرسائل -->
+            <div id="Mybox" class="d-flex align-items-center gap-3 px-2">
+                <a href="chat.html" class=" text-dark position-relative"><i class="fa-brands fa-rocketchat"></i><span
+                        class="notification"></span></a>
+                <a href="notification.html" class=" text-dark position-relative"><i class="fa-regular fa-bell"></i><span
+                        class="notification"></span></a>
+
+                <div class="profile-container">
+                    <img src="assets/img/user1.jpeg" alt="الصورة الشخصية" class="rounded-circle profile-img"
+                        data-bs-toggle="dropdown" aria-expanded="false" width="40" height="40">
+                    <ul class="dropdown-menu">
+                        <li class=" d-flex align-items-center gap-2">
+                            <img src="assets/img/user1.jpeg" alt="الصورة الشخصية" class="rounded-circle" width="40"
+                                height="40">
+                            <div>
+                                <h6 class="mb-1">محمد السعدي</h6>
+                                <p class="text-muted m-0">مقاول</p>
+                            </div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item px-0" href="profileAftrlLogin.html"><i
+                                    class="mx-2 fa-regular fa-user"></i> ملفي
+                                الشخصي</a></li>
+                        <li><a class="dropdown-item px-0" href="membershipPlan.html"><i
+                                    class="mx-2 fa-regular fa-address-card"></i>
+                                خطة العضوية</a></li>
+                        <li><a class="dropdown-item px-0" href="settingProfile.html"><i
+                                    class="mx-2 fa-solid fa-gear"></i>
+                                إعدادات
+                                الحساب</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item logout px-0" href="index.html">
+                                <svg class="mx-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.80078 5.80078C5.80078 4.10078 7.10078 2.80078 8.80078 2.80078H16.8008C18.5008 2.80078 19.8008 4.10078 19.8008 5.80078V17.8008C19.8008 19.5008 18.5008 20.8008 16.8008 20.8008H8.80078C7.10078 20.8008 5.80078 19.5008 5.80078 17.8008M13.8008 11.8008H3.80078"
+                                        stroke="#F9170B" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7.80078 7.80078L3.80078 11.8008L7.80078 15.8008" stroke="#F9170B"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                تسجيل خروج</a></li>
+                    </ul>
+                </div>
+
+
+
+
+
+                <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <label for="burger" class="burger">
+                        <input id="burger" type="checkbox">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container my-5 pt-5">
+        <h4 class="fw-bold contact-box-title"> إدارة المدفوعات</h4>
+        <div class="row my-4">
+            <div class="col-12 col-md-4 mb-3">
+                <div class="stats-box d-flex justify-content-between align-items-center">
+                    <svg width="61" height="50" viewBox="0 0 61 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="21" y="10" width="40" height="40" rx="20" fill="#EDFBED" />
+                        <path
+                            d="M36.3245 4.66684C35.5245 3.86684 34.6134 3.26685 33.5911 2.86684C32.5689 2.46684 31.5245 2.26685 30.4578 2.26685H11.5245C10.4578 2.26685 9.41337 2.46684 8.39115 2.86684C7.36892 3.26685 6.45781 3.86684 5.65781 4.66684C4.85781 5.46684 4.25781 6.37795 3.85781 7.40018C3.45781 8.4224 3.25781 9.46684 3.25781 10.5335V34.2668C3.25781 34.978 3.48003 35.6446 3.92448 36.2668C4.36892 36.8891 4.9467 37.3335 5.65781 37.6002C6.36892 37.8668 7.10226 37.8891 7.85781 37.6668C8.61337 37.4446 9.21337 37.0224 9.65781 36.4002L10.9911 34.4002C11.7023 33.5113 12.6356 33.0668 13.7911 33.0668H30.4578C31.9689 33.0668 33.3467 32.6891 34.5911 31.9335C35.8356 31.178 36.8356 30.1557 37.5911 28.8668C38.3467 27.578 38.7245 26.2224 38.7245 24.8002V10.5335C38.7245 9.46684 38.5245 8.4224 38.1245 7.40018C37.7245 6.37795 37.1245 5.46684 36.3245 4.66684ZM36.4578 24.8002C36.3689 26.4002 35.7467 27.778 34.5911 28.9335C33.4356 30.0891 32.0578 30.6668 30.4578 30.6668H13.9245C12.9467 30.6668 12.0356 30.8668 11.1911 31.2668C10.3467 31.6668 9.65781 32.2668 9.12448 33.0668L7.65781 34.9335C7.56892 35.1113 7.39115 35.2446 7.12448 35.3335C6.85781 35.4224 6.61337 35.4224 6.39115 35.3335C6.16892 35.2446 5.96892 35.1113 5.79115 34.9335C5.61337 34.7557 5.52448 34.5335 5.52448 34.2668V10.5335C5.52448 8.84462 6.10226 7.4224 7.25781 6.26684C8.41337 5.11129 9.83559 4.53351 11.5245 4.53351H30.4578C32.0578 4.53351 33.4578 5.11129 34.6578 6.26684C35.8578 7.4224 36.4578 8.84462 36.4578 10.5335V24.8002ZM13.7911 9.33351L14.7245 10.4002L16.0578 10.9335L15.2578 12.1335L15.1245 13.6002L13.7911 13.2002L12.3245 13.6002V12.1335L11.5245 10.9335L12.8578 10.4002L13.7911 9.33351ZM19.6578 9.33351L20.5911 10.4002L21.9245 10.9335L21.1245 12.1335V13.6002L19.6578 13.2002L18.3245 13.6002L18.1911 12.1335L17.3911 10.9335L18.7245 10.4002L19.6578 9.33351ZM25.6578 9.33351L26.5911 10.4002L27.9245 10.9335L27.1245 12.1335L26.9911 13.6002L25.6578 13.2002L24.1911 13.6002V12.1335L23.3911 10.9335L24.7245 10.4002L25.6578 9.33351ZM11.5245 23.6002H20.9911V25.8668H11.5245V23.6002ZM11.5245 17.6002H31.6578V20.0002H11.5245V17.6002Z"
+                            fill="#1F4B3F" />
+                    </svg>
+
+
+                    <div class="stats_content mx-2">
+                        <p class="mb-0 text-muted text-nowrap">إجمالي المستحقات</p>
+                        <h5 class="fw-bold text-success">$ <span>8000</span></h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" col-12 col-md-4 mb-3">
+                <div class="stats-box  d-flex justify-content-between align-items-center">
+                    <svg width="61" height="50" viewBox="0 0 61 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20.3359" y="10" width="40" height="40" rx="20" fill="#EDFBED" />
+                        <g clip-path="url(#clip0_538_17173)">
+                            <path
+                                d="M39.1281 6.53268C38.3281 5.73268 37.3948 5.33268 36.3281 5.33268H4.32812C3.26146 5.33268 2.32812 5.73268 1.52813 6.53268C0.728125 7.33268 0.328125 8.26601 0.328125 9.33268V14.666C0.328125 15.7327 0.728125 16.666 1.52813 17.466C2.32812 18.266 3.26146 18.666 4.32812 18.666H8.32812V30.666C8.32812 31.7327 8.72813 32.666 9.52813 33.466C10.3281 34.266 11.2615 34.666 12.3281 34.666H28.3281C29.3948 34.666 30.3281 34.266 31.1281 33.466C31.9281 32.666 32.3281 31.7327 32.3281 30.666V18.666H36.3281C37.3948 18.666 38.3281 18.266 39.1281 17.466C39.9281 16.666 40.3281 15.7327 40.3281 14.666V9.33268C40.3281 8.26601 39.9281 7.33268 39.1281 6.53268ZM3.39479 8.39935C3.66146 8.13268 3.97257 7.99935 4.32812 7.99935H36.3281C36.6837 7.99935 36.9948 8.13268 37.2615 8.39935C37.5281 8.66601 37.6615 8.97713 37.6615 9.33268V10.9327C37.217 10.7549 36.7726 10.666 36.3281 10.666H4.32812C3.88368 10.666 3.43924 10.7549 2.99479 10.9327C2.81701 10.0438 2.95035 9.19935 3.39479 8.39935ZM29.6615 25.3327H28.3281C26.817 25.3327 25.5503 25.8438 24.5281 26.866C23.5059 27.8882 22.9948 29.1549 22.9948 30.666V31.9993H17.6615V30.666C17.6615 29.1549 17.1503 27.8882 16.1281 26.866C15.1059 25.8438 13.8392 25.3327 12.3281 25.3327H10.9948V13.3327H29.6615V25.3327ZM4.32812 15.9993C3.97257 15.9993 3.68368 15.866 3.46146 15.5993C3.23924 15.3327 3.12813 15.0216 3.12813 14.666C3.12813 14.3105 3.23924 13.9993 3.46146 13.7327C3.68368 13.466 3.97257 13.3327 4.32812 13.3327H8.32812V15.9993H4.32812ZM10.9948 30.666V27.9993H12.3281C13.0392 27.9993 13.6615 28.266 14.1948 28.7993C14.7281 29.3327 14.9948 29.9549 14.9948 30.666V31.9993H12.3281C11.9726 31.9993 11.6615 31.866 11.3948 31.5993C11.1281 31.3327 10.9948 31.0216 10.9948 30.666ZM28.3281 31.9993H25.6615V30.666C25.6615 29.9549 25.9281 29.3327 26.4615 28.7993C26.9948 28.266 27.617 27.9993 28.3281 27.9993H29.6615V30.666C29.6615 31.0216 29.5281 31.3327 29.2615 31.5993C28.9948 31.866 28.6837 31.9993 28.3281 31.9993ZM37.2615 15.5993C36.9948 15.866 36.6837 15.9993 36.3281 15.9993H32.3281V13.3327H36.3281C36.9503 13.3327 37.3726 13.5993 37.5948 14.1327C37.817 14.666 37.7059 15.1549 37.2615 15.5993Z"
+                                fill="#1F4B3F" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_538_17173">
+                                <rect width="40.02" height="40" fill="white" transform="matrix(1 0 0 -1 0.316406 40)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <div class="stats_content mx-2">
+                        <p class="mb-0 text-muted text-nowrap">المبالغ المدفوعة</p>
+                        <h5 class="fw-bold text-danger">$ <span>912</span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-12 col-md-4 mb-3">
+                <div class="stats-box  d-flex justify-content-between align-items-center">
+                    <svg width="61" height="50" viewBox="0 0 61 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20.668" y="10" width="40" height="40" rx="20" fill="#EDFBED" />
+                        <path
+                            d="M36.7924 23.3324L35.9925 22.7991C35.6369 22.5324 35.2369 22.5324 34.7924 22.7991L25.3258 27.8658C24.7924 28.2213 24.2147 28.2213 23.5924 27.8658C23.6813 27.2435 23.5702 26.6213 23.2591 25.9991C22.948 25.3769 22.5258 24.888 21.9924 24.5324L19.4591 23.0658C18.4813 22.5324 17.4591 22.2435 16.3924 22.1991C15.3258 22.1546 14.3036 22.4435 13.3258 23.0658L8.79245 25.7324V24.7991C8.79245 24.4435 8.68134 24.1546 8.45912 23.9324C8.23689 23.7102 7.948 23.5991 7.59245 23.5991H4.12578C3.77023 23.5991 3.48134 23.7102 3.25911 23.9324C3.03689 24.1546 2.92578 24.4435 2.92578 24.7991V36.5324C2.92578 36.888 3.03689 37.1769 3.25911 37.3991C3.48134 37.6213 3.77023 37.7324 4.12578 37.7324H7.59245C7.948 37.7324 8.23689 37.6213 8.45912 37.3991C8.68134 37.1769 8.79245 36.888 8.79245 36.5324H14.1258L22.7924 37.5991C24.3036 37.688 25.6813 37.288 26.9258 36.3991L36.9258 29.1991C37.3702 28.8435 37.7258 28.3991 37.9925 27.8658C38.2591 27.3324 38.3702 26.7769 38.3258 26.1991C38.2813 25.6213 38.1258 25.088 37.8591 24.5991C37.5924 24.1102 37.2369 23.688 36.7924 23.3324ZM6.39245 35.4658H5.19245V25.8658H6.39245V35.4658ZM35.4591 27.3324L25.4591 34.5324C24.748 35.0658 23.9036 35.288 22.9258 35.1991L14.3924 34.2658H8.79245V28.2658C8.97023 28.2658 9.148 28.2213 9.32578 28.1324L14.5258 25.0658C15.0591 24.7991 15.6591 24.6658 16.3258 24.6658C16.9924 24.6658 17.5924 24.7991 18.1258 25.0658L20.6591 26.6658C20.9258 26.8435 21.1036 27.0658 21.1924 27.3324C21.2813 27.5991 21.2591 27.8658 21.1258 28.1324C20.9924 28.3991 20.7924 28.5991 20.5258 28.7324C20.2591 28.8658 19.9924 28.8435 19.7258 28.6658L16.7924 27.5991L15.8591 29.7324L18.7924 30.9324C19.4147 31.1991 20.0813 31.2435 20.7924 31.0658C21.5036 30.888 22.0813 30.5769 22.5258 30.1324C23.148 30.3991 23.8147 30.5324 24.5258 30.5324C25.2369 30.5324 25.9036 30.3546 26.5258 29.9991L35.3258 25.1991C35.6813 25.4658 35.8813 25.8213 35.9258 26.2658C35.9702 26.7102 35.8147 27.0658 35.4591 27.3324ZM25.5924 23.4658H23.1924V22.1324H21.3258V19.7324H25.3258C25.5924 19.7324 25.8591 19.6213 26.1258 19.3991C26.3924 19.1769 26.5258 18.9102 26.5258 18.5991C26.5258 18.288 26.3924 17.9991 26.1258 17.7324C25.8591 17.4658 25.5924 17.3324 25.3258 17.3324H23.7258C22.748 17.4213 21.8813 17.1324 21.1258 16.4658C20.3702 15.7991 19.9702 14.9769 19.9258 13.9991C19.8813 13.0213 20.1924 12.1546 20.8591 11.3991C21.5258 10.6435 22.348 10.2658 23.3258 10.2658V8.93242H25.7258V10.2658H27.7258V12.5324H23.7258C23.3702 12.5324 23.0813 12.6658 22.8591 12.9324C22.6369 13.1991 22.5258 13.488 22.5258 13.7991C22.5258 14.1102 22.6369 14.3769 22.8591 14.5991C23.0813 14.8213 23.3702 14.9769 23.7258 15.0658H25.3258C26.3036 14.9769 27.1258 15.2658 27.7924 15.9324C28.4591 16.5991 28.8147 17.4213 28.8591 18.3991C28.9036 19.3769 28.6147 20.2213 27.9924 20.9324C27.3702 21.6435 26.5702 22.0435 25.5924 22.1324V23.4658ZM11.1924 20.3991C10.3036 17.5546 10.3258 14.7102 11.2591 11.8658C12.1924 9.02131 13.8813 6.7102 16.3258 4.93242C18.7702 3.15464 21.4813 2.26575 24.4591 2.26575C27.4369 2.26575 30.148 3.15464 32.5924 4.93242C35.0369 6.7102 36.748 9.02131 37.7258 11.8658C38.7036 14.7102 38.748 17.5546 37.8591 20.3991L35.5924 19.5991C36.3924 17.288 36.3924 14.9324 35.5924 12.5324C34.7924 10.1324 33.3702 8.19909 31.3258 6.73242C29.2813 5.26575 27.0147 4.53242 24.5258 4.53242C22.0369 4.53242 19.7924 5.26575 17.7924 6.73242C15.7924 8.19909 14.3924 10.1324 13.5924 12.5324C12.7924 14.9324 12.748 17.288 13.4591 19.5991L11.1924 20.3991Z"
+                            fill="#1F4B3F" />
+                    </svg>
+
+                    <div class="stats_content mx-2 text-nowrap">
+                        <p class="mb-0 text-muted">المدفوعات المعلقة</p>
+                        <h5 class="fw-bold">$ <span>828</span></h5>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="container mt-5 p-0">
+            <table class="table table-bordered text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>الخدمة</th>
+                        <th>المبلغ</th>
+                        <th>الحالة</th>
+                        <th>تاريخ الاستحقاق</th>
+                        <th>إجراء</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>تنفيذ مخطط معماري</td>
+                        <td>5,000 ريال</td>
+                        <td><span class="status-paid">مدفوع</span></td>
+                        <td>9 أبريل 2023</td>
+                        <td><button class="btn btn-details">عرض التفاصيل</button></td>
+                    </tr>
+                    <tr>
+                        <td>تمديدات كهربائية</td>
+                        <td>3,700 ريال</td>
+                        <td><span class="status-pending">معلقة</span></td>
+                        <td>9 أبريل 2023</td>
+                        <td><button class="btn btn-pay">دفع الآن</button></td>
+                    </tr>
+                    <tr>
+                        <td>تنفيذ مخطط معماري</td>
+                        <td>5,000 ريال</td>
+                        <td><span class="status-paid">مدفوع</span></td>
+                        <td>9 أبريل 2023</td>
+                        <td><button class="btn btn-details">عرض التفاصيل</button></td>
+                    </tr>
+                    <tr>
+                        <td>تمديدات كهربائية</td>
+                        <td>3,700 ريال</td>
+                        <td><span class="status-pending">معلقة</span></td>
+                        <td>9 أبريل 2023</td>
+                        <td><button class="btn btn-pay">دفع الآن</button></td>
+                    </tr>
+                    <tr>
+                        <td>تنفيذ مخطط معماري</td>
+                        <td>5,000 ريال</td>
+                        <td><span class="status-paid">مدفوع</span></td>
+                        <td>9 أبريل 2023</td>
+                        <td><button class="btn btn-details">عرض التفاصيل</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <form class="container card p-3 ">
+            <h4>طرق الدفع</h4>
+            <div class="d-flex align-items-center gap-2">
+                <label for="paymentMethod" class="form-label text-dark">اختر طريقة الدفع الافتراضية</label>
+                <select id="paymentMethod" class="form-select rounded-pill text-start">
+                    <option selected>Bank Transfer</option>
+                    <option value="Payoneer">Payoneer </option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </div>
+
+
+            <div class=" mt-5 paymentMethod_con">
+                <h5 class="text-end">تفاصيل الدفع</h5>
+
+                <!-- التبويبات -->
+                <ul class="nav nav-pills mb-3 justify-content-end" id="paymentTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="payoneer-tab" data-bs-toggle="pill" data-bs-target="#payoneer"
+                            type="button" role="tab">Payoneer</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="bank-tab" data-bs-toggle="pill" data-bs-target="#bank"
+                            type="button" role="tab">Bank Transfer</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="paypal-tab" data-bs-toggle="pill" data-bs-target="#paypal"
+                            type="button" role="tab">paypal</button>
+                    </li>
+
+
+                </ul>
+
+                <!-- المحتوى لكل تبويب -->
+                <div class="tab-content" id="paymentTabsContent">
+                    <!-- تبويب Bank Transfer -->
+                    <div class="tab-pane fade show active" id="bank" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <label class="form-label text-dark">Bank Account Number<span
+                                        class="text-danger fs-4">*</span></label>
+                                <input type="text" class="form-control" placeholder="Bank Account Number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-dark">Bank Name<span
+                                        class="text-danger fs-4">*</span></label>
+                                <input type="text" class="form-control" placeholder="Bank Name" required>
+                            </div>
+
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-dark">Bank Routing Number<span
+                                        class="text-danger fs-4">*</span></label>
+                                <input type="text" class="form-control" placeholder="Bank Routing Number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-dark">Bank Account Holder Name<span
+                                        class="text-danger fs-4">*</span></label>
+                                <input type="text" class="form-control" placeholder="Bank Account Holder Name" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-dark">Swift Code<span
+                                        class="text-danger fs-4">*</span></label>
+                                <input type="text" class="form-control" placeholder="Swift Code" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-dark">Bank IBAN<span
+                                        class="text-danger fs-4">*</span></label>
+
+                                <input type="text" class="form-control" placeholder="Bank IBAN" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تبويب PayPal -->
+                    <div class="tab-pane fade" id="paypal" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="form-label text-dark">*PayPal Email<span class="text-danger fs-4">*</span></label>
+                                <input type="email" class="form-control" placeholder="example@paypal.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تبويب Payoneer -->
+                    <div class="tab-pane fade" id="payoneer" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="form-label text-dark">Payoneer Email<span class="text-danger fs-4">*</span></label>
+                                <input type="email" class="form-control" placeholder="example@payoneer.com" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-submit w-100 mt-3 ">حفظ البيانات</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top row">
+                <div class="footer-column col-md-4 col-12 pb-3 ">
+                    <div class="">
+                        <img src="assets/img/footerlogo.png" alt="">
+                        <p>
+                            تعاهد هي منصة رقمية موثوقة تعمل كحلقة وصل بين طالب الخدمة ومقدمها في قطاع المقاولات. نسعى
+                            لتبسيط عملية البحث والاختيار
+                            بين المقاولين والعمال من خلال تقديم حلول مبتكرة تجمع كافة الخدمات في مكان واحد. بفضل تعاهد،
+                            يصبح اختيار المقاول العقاري
+                            أسهل وأكثر راحة، مما يضمن تجربة احترافية وآمنة لجميع الأطراف المعنية
+                        </p>
+                    </div>
+                    <div class="d-flex d-md-block align-items-center gap-3 justify-content-center">
+                        <div class="media">
+                            <div class="con_soc">
+                                <a href="#" data-color="#1877F2" class=" faq-button ">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span class="tooltip">facebook</span>
+                                </a>
+
+                                <a href="#" data-color="#1da1f2" class="faq-button">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                    <span class="tooltip">twitter</span>
+                                </a>
+
+                                <a href="#" data-color="#FF0069" class="faq-button">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span class="tooltip">instagram</span>
+                                </a>
+                                <a href="#" data-color="#FFFC00" class="faq-button ">
+                                    <i class="fa-brands fa-snapchat"></i>
+                                    <span class="tooltip">Snapchat</span>
+                                </a>
+                                <a href="#" data-color="#FF0000" class="faq-button ">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    <span class="tooltip">YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer-column col-md-2 col-4">
+                    <ul>
+                        <h3>روابط هامة</h3>
+                        <li><a href="#">المقاولين </a></li>
+                        <li><a href="#"> المشاريع</a></li>
+                        <li><a href="#">مزودي الخدمات</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">الاسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column col-md-2 col-8">
+                    <div>
+                        <h3>تعرف علينا</h3>
+                        <ul>
+                            <li><a href="#">الشركة</a></li>
+                            <li><a href="#">كن شريكا معنا</a></li>
+                            <li><a href="#">سياسة الخصوصية</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>حمل التطبيق</h3>
+                        <p>15% تخفيض للمستخدمين الجدد</p>
+                        <div class="app-buttons">
+                            <div class="app_btn">
+                                <a> google play <i class="fa-brands fa-google-play"></i></a>
+                                <a> app store <i class="fa-brands fa-apple"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column col-md-4 col-12 footer-column_end  flex-row flex-md-column ">
+                    <div class="contact">
+                        <h3>تواصل معنا</h3>
+                        <ul>
+                            <li class="d-flex  align-items-center gap-3">
+                                <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_200_3669" style="mask-type:luminance" maskUnits="userSpaceOnUse"
+                                        x="0" y="0" width="20" height="20">
+                                        <path d="M19.0026 0.666748H0.335938V19.3334H19.0026V0.666748Z" fill="white" />
+                                    </mask>
+                                    <g mask="url(#mask0_200_3669)">
+                                        <path
+                                            d="M1.89062 6.11117L8.24112 10.5565C8.75537 10.9165 9.01249 11.0965 9.29217 11.1662C9.53921 11.2278 9.79759 11.2278 10.0446 11.1662C10.3243 11.0965 10.5814 10.9165 11.0957 10.5565L17.4462 6.11117M5.62396 16.2223H13.7128C15.0196 16.2223 15.673 16.2223 16.1721 15.968C16.6112 15.7443 16.9681 15.3873 17.1918 14.9483C17.4462 14.4491 17.4462 13.7957 17.4462 12.4889V7.51117C17.4462 6.20438 17.4462 5.55098 17.1918 5.05185C16.9681 4.61281 16.6112 4.25585 16.1721 4.03215C15.673 3.77783 15.0196 3.77783 13.7128 3.77783H5.62396C4.31717 3.77783 3.66378 3.77783 3.16465 4.03215C2.72561 4.25585 2.36864 4.61281 2.14494 5.05185C1.89062 5.55098 1.89062 6.20438 1.89062 7.51117V12.4889C1.89062 13.7957 1.89062 14.4491 2.14494 14.9483C2.36864 15.3873 2.72561 15.7443 3.16465 15.968C3.66378 16.2223 4.31717 16.2223 5.62396 16.2223Z"
+                                            stroke="#31184A" stroke-width="1.55556" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                                <div>
+                                    <p class="m-0">البريد الالكتروني</p>
+                                    <a href="">Taahud@outlook.sa</a>
+                                </div>
+                            </li>
+                            <li class="d-flex  align-items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.85458 7.55253C7.39591 8.68001 8.13386 9.73673 9.06842 10.6713C10.003 11.6059 11.0597 12.3438 12.1872 12.8851C12.2841 12.9317 12.3326 12.955 12.394 12.9729C12.612 13.0364 12.8798 12.9908 13.0645 12.8585C13.1164 12.8213 13.1609 12.7769 13.2498 12.688C13.5217 12.416 13.6577 12.2801 13.7944 12.1912C14.31 11.856 14.9746 11.856 15.4902 12.1912C15.6269 12.2801 15.7629 12.416 16.0348 12.688L16.1864 12.8395C16.5997 13.2529 16.8064 13.4595 16.9187 13.6815C17.1419 14.1229 17.1419 14.6443 16.9187 15.0857C16.8064 15.3077 16.5997 15.5143 16.1864 15.9277L16.0638 16.0503C15.6518 16.4622 15.4459 16.6682 15.1659 16.8255C14.8551 17 14.3725 17.1255 14.0161 17.1245C13.695 17.1235 13.4754 17.0612 13.0364 16.9366C10.6771 16.267 8.45086 15.0035 6.59354 13.1462C4.73623 11.2888 3.47275 9.06257 2.8031 6.70326C2.6785 6.26424 2.61619 6.04474 2.61524 5.72356C2.61418 5.36716 2.73968 4.88456 2.91423 4.57383C3.07154 4.2938 3.2775 4.08784 3.68943 3.67591L3.81203 3.55331C4.22538 3.13996 4.43205 2.93329 4.65401 2.82102C5.09545 2.59775 5.61677 2.59775 6.0582 2.82102C6.28017 2.93329 6.48684 3.13996 6.90018 3.55331L7.05175 3.70487C7.32366 3.97679 7.45962 4.11275 7.54851 4.24946C7.88373 4.76504 7.88373 5.42972 7.54851 5.9453C7.45962 6.08201 7.32366 6.21797 7.05175 6.48989C6.96284 6.5788 6.91838 6.62325 6.88117 6.67522C6.74894 6.85988 6.70329 7.12764 6.76685 7.34569C6.78474 7.40705 6.80802 7.45555 6.85458 7.55253Z"
+                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div>
+                                    <p class="m-0">رقم الاتصال</p>
+                                    <a href="">0530683668</a>
+                                </div>
+                            </li>
+                            <li class="d-flex  align-items-center gap-3">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.66927 10.3891C10.958 10.3891 12.0026 9.34441 12.0026 8.05575C12.0026 6.76708 10.958 5.72241 9.66927 5.72241C8.38061 5.72241 7.33594 6.76708 7.33594 8.05575C7.33594 9.34441 8.38061 10.3891 9.66927 10.3891Z"
+                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.66949 17.778C11.225 14.6669 15.8917 12.6589 15.8917 8.44463C15.8917 5.0082 13.1059 2.22241 9.66949 2.22241C6.23305 2.22241 3.44727 5.0082 3.44727 8.44463C3.44727 12.6589 8.11394 14.6669 9.66949 17.778Z"
+                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div>
+                                    <p class="m-0">العنوان</p>
+                                    <a href="">جازان، حي الشاطئ طريق الأمير محمد بن ناصر</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex justify-content-between px-5 align-items-center flex-md-row flex-column">
+            <p class="copyright  m-0">جميع الحقوق محفوظة تعاهد <span id="Copy_year"></span> &copy;</p>
+
+            <div class="payment-methods">
+                <img src="assets/img/tabby.png" alt="Tabby">
+                <img src="assets/img/tamara.png" alt="Tamara">
+                <img src="assets/img/visa.png" alt="Visa">
+                <img src="assets/img/applePAy.png" alt="Apple Pay">
+                <img src="assets/img/Mada_Logo.png" alt="Mada">
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+
+</html>
