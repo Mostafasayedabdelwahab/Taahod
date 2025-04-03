@@ -139,6 +139,12 @@ header .dropdown-menu[data-bs-popper] {
     padding-bottom: 20px;
   }
 }
+
+
+.dropdownForLogin .dropdown-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
 header .dropdown-item {
   transition: var(--transition);
 }
@@ -1828,8 +1834,8 @@ input[type="checkbox"] {
 }
 
 .footer-top img {
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 80px;
 }
 
 .footer-column {
