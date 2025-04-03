@@ -1,56 +1,5 @@
 export function initModals() {
-  // modal Login
-  if (document.getElementById("modalLoginOverlay")) {
-    function openModalLogin() {
-      document.getElementById("modalLoginOverlay").classList.add("active");
-    }
-
-    function closeModalLogin() {
-      document.getElementById("modalLoginOverlay").classList.remove("active");
-    }
-
-    function toggleModal() {
-      let modalOverlay = document.getElementById("modalLoginOverlay");
-
-      if (modalOverlay.classList.contains("active")) {
-        closeModalLogin();
-      } else {
-        openModalLogin();
-      }
-    }
-
-    function selectAccount(type, element) {
-      let link = "";
-      // تحديد الرابط بناءً على النوع المختار
-      if (type === "engineer") {
-        link = "registerEngineer.html";
-      } else if (type === "contractor") {
-        link = "registerContractor.html";
-      } else if (type === "individual") {
-        link = "registerIndividual.html";
-      }
-
-      // تحديث رابط زر "إنشاء حساب"
-      document.getElementById("createAccountBtn").href = link;
-
-      // إزالة التحديد من جميع الأزرار ثم تفعيل الزر المختار
-      document
-        .querySelectorAll(".optionsAccount button")
-        .forEach((btn) => btn.classList.remove("active"));
-      element.classList.add("active");
-    }
-
-    // إغلاق المودال عند الضغط خارج الصندوق
-    document
-      .getElementById("modalLoginOverlay")
-      .addEventListener("click", closeModalLogin);
-
-    //  زر الفتح
-    document
-      .getElementById("openModalLogin")
-      .addEventListener("click", toggleModal);
-  }
-  
+ 
   // modal send
   if (document.getElementById("modalSendOverlay")) {
     function openModal() {
