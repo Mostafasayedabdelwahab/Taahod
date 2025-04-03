@@ -1,511 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تعاهد</title>
-    <meta property="og:title" content="تعاهد" />
-    <meta property="og:description"
-        content="تعاهد هي منصة رقمية موثوقة تعمل كوسيط يجمع بين طالبي الخدمات ومقدميها في قطاع المقاولات. نهدف إلى تسهيل عمليات البحث، التعاقد، وتنفيذ المشاريع من خلال توفير بيئة آمنة واحترافية تجمع بين المقاولين، العمال، والمكاتب الهندسية." />
-    <meta property="og:image" content="/assets/img/logo.png" />
-    <!-- <meta property="og:url" content=" اكتب لينك الموقع https://tanafos.sa" /> -->
-    <meta property="og:type" content="websit" />
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-
-    <!-- استدعاء الخط  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- css -->
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-</head>
-
-<body>
-    <nav class="navForLogin navbar navbar-expand-lg navbar-light  fixed-top">
-        <div class="container p-0">
-            <div class="d-flex boxForLogo">
-                <!-- اللوجو -->
-                <a class="navbar-brand" href="homeAfterLogin.html">
-                    <img src="assets/img/head-logo.png" alt="شعار">
-                </a>
-                <!-- روابط القائمة -->
-                <div class="collapse navbar-collapse order-1 order-lg-0 d-lg-flex justify-content-between w-100"
-                    id="navbarNav">
-                    <ul class="navbar-nav  p-0 mb-2 mb-lg-0">
-                        <li class="nav-item px-2 px-md-0"><a class="nav-link d-flex align-items-center gap-2"
-                                href="addProject.html"><i class="fa-solid fa-pen"></i> اضف مشروع</a></li>
-                        <li class="nav-item px-2 px-md-0"><a class="nav-link d-flex align-items-center gap-2"
-                                href="serviceProviders.html"><i class="fa-solid fa-users"></i> ابحث عن مهندسين</a></li>
-                        <li class="nav-item px-2 px-md-0"><a class="nav-link" href="projects.html"><i
-                                    class="fa-solid fa-briefcase"></i>
-                                تصفح المشاريع</a></li>
-                    </ul>
-                    <!-- البحث مع فلترة -->
-                    <form class="search-box form-control p-0">
-    
-                        <button class="btn" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <input type="search" placeholder="بحث" aria-label="Search">
-                        <select class="form-control" aria-label="فلترة البحث">
-                            <option selected>مشاريع</option>
-                            <option value="1">مهندسين</option>
-                            <option value="2">شركات</option>
-                        </select>
-                    </form>
-                </div>
-            </div>
-            <!-- الإشعارات والرسائل -->
-            <div id="Mybox" class="d-flex align-items-center gap-3 px-2">
-                <a href="chat.html" class=" text-dark position-relative"><i class="fa-brands fa-rocketchat"></i><span
-                        class="notification"></span></a>
-                <a href="notification.html" class=" text-dark position-relative"><i class="fa-regular fa-bell"></i><span
-                        class="notification"></span></a>
-    
-                <div class="profile-container">
-                    <img src="assets/img/user1.jpeg" alt="الصورة الشخصية" class="rounded-circle profile-img"
-                        data-bs-toggle="dropdown" aria-expanded="false" width="40" height="40">
-                    <ul class="dropdown-menu">
-                        <li class=" d-flex align-items-center gap-2">
-                            <img src="assets/img/user1.jpeg" alt="الصورة الشخصية" class="rounded-circle" width="40"
-                                height="40">
-                            <div>
-                                <h6 class="mb-1">محمد السعدي</h6>
-                                <p class="text-muted m-0">مقاول</p>
-                            </div>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item px-0" href="profileAftrlLogin.html"><i
-                                    class="mx-2 fa-regular fa-user"></i> ملفي
-                                الشخصي</a></li>
-                        <li><a class="dropdown-item px-0" href="membershipPlan.html"><i
-                                    class="mx-2 fa-regular fa-address-card"></i>
-                                خطة العضوية</a></li>
-                        <li><a class="dropdown-item px-0" href="settingProfile.html"><i class="mx-2 fa-solid fa-gear"></i>
-                                إعدادات
-                                الحساب</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item logout px-0" href="index.html">
-                                <svg class="mx-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M5.80078 5.80078C5.80078 4.10078 7.10078 2.80078 8.80078 2.80078H16.8008C18.5008 2.80078 19.8008 4.10078 19.8008 5.80078V17.8008C19.8008 19.5008 18.5008 20.8008 16.8008 20.8008H8.80078C7.10078 20.8008 5.80078 19.5008 5.80078 17.8008M13.8008 11.8008H3.80078"
-                                        stroke="#F9170B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M7.80078 7.80078L3.80078 11.8008L7.80078 15.8008" stroke="#F9170B"
-                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-    
-                                تسجيل خروج</a></li>
-                    </ul>
-                </div>
-    
-    
-    
-    
-    
-                <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <label for="burger" class="burger">
-                        <input id="burger" type="checkbox">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                </button>
-            </div>
-    
-        </div>
-    </nav>
-    <div class="container my-5 pt-5">
-        <div class="text-center">
-            <h2> تفاصيل المشروع</h2>
-
-            <div class="breadcrumb d-flex justify-content-center">
-                <a href="projects.html" class="home-icon">
-                    المشاريع
-                </a>
-                <span class="separator">/</span>
-                <a href="applyProject.html" class="home-icon">
-                    مطلوب فني كهرباء
-                </a>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12">
-                <div class="project-card ">
-                    <div class=" contact-box-title">
-                        <h4 class="fw-bold text-center">مطلوب فني كهرباء
-                        </h4>
-                        <p class="text-muted text-center m-0">عنوان المشروع</p>
-                    </div>
-                    <div class="details row p-1 px-lg-5">
-                        <div class="icon-text col-6 col-lg-3 p-0">
-                            <i class="fa-solid fa-sack-dollar"></i>
-                            <div>
-                                <span>$14,000 - $25,000</span>
-                                <p class="m-0 text-muted">الراتب</p>
-                            </div>
-                        </div>
-                        <div class="icon-text col-6 col-lg-3 p-0">
-                            <i class="fa-solid fa-briefcase"></i>
-                            <div>
-                                <span>تجاري</span>
-                                <p class="m-0 text-muted">نوع المشروع</p>
-                            </div>
-                        </div>
-                        <div class="icon-text col-6 col-lg-3 p-0">
-                            <i class="fa-solid fa-clock"></i>
-                            <div>
-                                <span>20 يومًا</span>
-                                <p class="m-0 text-muted">الوقت المتوقع</p>
-                            </div>
-                        </div>
-                        <div class="icon-text col-6 col-lg-3 p-0">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <span>جدة - حي النخيل - شارع عبدالله بن أوس</span>
-                                <p class="m-0 text-muted">الموقع</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card my-3">
-                    <h4 class="fw-bold contact-box-title">تفاصيل المشروع</h4>
-                    <div class="detailsProject">
-                        <p>🔌 مطلوب فني كهرباء للعمل في مشروع تجاري بالرياض 🔌
-                            نبحث عن فني كهرباء محترف للعمل في مشروع تركيب وصيانة الأنظمة الكهربائية داخل مجمع تجاري حديث
-                            في
-                            مدينة الرياض، السعودية.
-                            يتطلب العمل خبرة في التمديدات الكهربائية، أنظمة الحماية، صيانة اللوحات الكهربائية، واكتشاف
-                            الأعطال وإصلاحها وفقًا
-                            للمعايير السعودية.</p>
-                        <p>✅ المهام المطلوبة :</p>
-                        <ul style="list-style: disc;">
-                            <li>تنفيذ التمديدات الكهربائية وفق المخططات الهندسية.</li>
-                            <li>تركيب وفحص وصيانة اللوحات والتوصيلات الكهربائية.</li>
-                            <li>اكتشاف الأعطال الكهربائية وإصلاحها بكفاءة.</li>
-                            <li>الالتزام بمعايير السلامة والجودة لضمان بيئة عمل آمنة.</li>
-                        </ul>
-                        <p>📍 موقع العمل: الرياض، السعودية</p>
-                        <p>⏳ مدة التنفيذ: 3 أشهر مع إمكانية التمديد</p>
-                        <p>💰 المكافأة: تُحدد بعد مراجعة العروض والخبرة</p>
-                        <p>📅 آخر موعد للتقديم: 25 أبريل 2025</p>
-                        <p>💡 إذا كنت تمتلك الخبرة المطلوبة، قدّم عرضك الآن وانضم إلى فريق العمل في هذا المشروع المميز!
-                        </p>
-                    </div>
-                    <div>
-                        <h5 class="fw-bold mt-3">المهارات المطلوبة</h5>
-                        <span class="status-fillter mx-2 my-1 my-md-0">إدارة المشاريع الإنشائية</span>
-                        <span class="status-fillter mx-2 my-1 my-md-0">التصميم الداخلي</span>
-                        <span class="status-fillter mx-2 my-1 my-md-0">الإنشاءات المدنية</span>
-                        <span class="status-fillter mx-2 my-1 my-md-0">الهندسة المعمارية</span>
-                        <span class="status-fillter mx-2 my-1 my-md-0">البناء والتشييد</span>
-                    </div>
-                </div>
-                <div class="project-card my-3  ">
-                    <h4 class="fw-bold contact-box-title">طلبات تقديم الوظيفة<span> (4)</span></h4>
-                    <div class="jobApplications">
-                        <div class="jobApplications-card">
-                            <div>
-                                <img src="assets/img/user2.png" alt="الصورة الشخصية" class="profile-img">
-                            </div>
-                            <div class="jobApplications-info">
-                                <h6>م. محمد</h6>
-                                <div class="jobApplications-header">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
-                                </div>
-                                <p class="jobApplications-text">أهلًا، أنا مهتم بوظيفة في كهرباء. عندي خبرة في الصيانة
-                                    والتركيب، وقد عملت على مشاريع
-                                    تتطلب مهارات فنية عالية. أقدر أشتغل بشكل جيد مع الفريق وأضمن سير العمل بدون أي
-                                    مشاكل.
-                                    أتمنى أكون جزءًا من
-                                    فريقكم وأساهم في نجاحه.</p>
-                            </div>
-                        </div>
-                        <div class="jobApplications-card">
-                            <div>
-                                <img src="assets/img/user3.png" alt="الصورة الشخصية" class="profile-img">
-                            </div>
-                            <div class="jobApplications-info">
-                                <h6>هديل محمد</h6>
-                                <div class="jobApplications-header">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
-                                </div>
-                                <p class="jobApplications-text">
-                                    السلام عليكم، أبحث عن فرصة عمل كفني كهرباء. لدي خبرة تمتد لأكثر من خمس سنوات في مجال
-                                    الكهرباء والتقنية، ومهاراتي تشمل
-                                    التركيب والصيانة. أعمل بشكل جيد تحت الضغط وأحب التحديات الجديدة.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="jobApplications-card">
-                            <div>
-                                <img src="assets/img/user4.png" alt="الصورة الشخصية" class="profile-img">
-                            </div>
-                            <div class="jobApplications-info">
-                                <h6>م. سعاد</h6>
-                                <div class="jobApplications-header">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
-                                </div>
-                                <p class="jobApplications-text">
-                                    السلام عليكم، أبحث عن فرصة عمل كفني كهرباء. لدي خبرة تمتد لأكثر من خمس سنوات في مجال
-                                    الكهرباء والتقنية، ومهاراتي تشمل
-                                    التركيب والصيانة. أعمل بشكل جيد تحت الضغط وأحب التحديات الجديدة.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="jobApplications-card">
-                            <div>
-                                <img src="assets/img/user5.png" alt="الصورة الشخصية" class="profile-img">
-                            </div>
-                            <div class="jobApplications-info">
-                                <h6>م. علي</h6>
-                                <div class="jobApplications-header">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
-                                </div>
-                                <p class="jobApplications-text">مرحبا، أنا متحمس للتقديم على وظيفة فني كهرباء. لدي خبرة
-                                    في الأنظمة الكهربائية المتقدمة وأستطيع التعامل مع المشاكل الفنية
-                                    بكفاءة. أؤمن بأن التعاون مع الفريق هو أساس النجاح وأتطلع للمساهمة في مشاريعكم.</p>
-                            </div>
-                        </div>
-                        <div class="jobApplications-card">
-                            <div>
-                                <img src="assets/img/user2.png" alt="الصورة الشخصية" class="profile-img">
-                            </div>
-                            <div class="jobApplications-info">
-                                <h6>م. محمد</h6>
-                                <div class="jobApplications-header">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
-                                </div>
-                                <p class="jobApplications-text">أهلًا، أنا مهتم بوظيفة في كهرباء. عندي خبرة في الصيانة
-                                    والتركيب، وقد عملت على مشاريع
-                                    تتطلب مهارات فنية عالية. أقدر أشتغل بشكل جيد مع الفريق وأضمن سير العمل بدون أي
-                                    مشاكل.
-                                    أتمنى أكون جزءًا من
-                                    فريقكم وأساهم في نجاحه.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top row">
-                <div class="footer-column col-md-4 col-12 pb-3 ">
-                    <div class="">
-                        <img src="assets/img/footerlogo.png" alt="">
-                        <p>
-                            تعاهد هي منصة رقمية موثوقة تعمل كحلقة وصل بين طالب الخدمة ومقدمها في قطاع المقاولات. نسعى
-                            لتبسيط عملية البحث والاختيار
-                            بين المقاولين والعمال من خلال تقديم حلول مبتكرة تجمع كافة الخدمات في مكان واحد. بفضل تعاهد،
-                            يصبح اختيار المقاول العقاري
-                            أسهل وأكثر راحة، مما يضمن تجربة احترافية وآمنة لجميع الأطراف المعنية
-                        </p>
-                    </div>
-                    <div class="d-flex d-md-block align-items-center gap-3 justify-content-center">
-                        <div class="media">
-                            <div class="con_soc">
-                                <a href="#" data-color="#1877F2" class=" faq-button ">
-                                    <i class="fab fa-facebook-f"></i>
-                                    <span class="tooltip">facebook</span>
-                                </a>
-
-                                <a href="#" data-color="#1da1f2" class="faq-button">
-                                    <i class="fa-brands fa-x-twitter"></i>
-                                    <span class="tooltip">twitter</span>
-                                </a>
-
-                                <a href="#" data-color="#FF0069" class="faq-button">
-                                    <i class="fa-brands fa-instagram"></i>
-                                    <span class="tooltip">instagram</span>
-                                </a>
-                                <a href="#" data-color="#FFFC00" class="faq-button ">
-                                    <i class="fa-brands fa-snapchat"></i>
-                                    <span class="tooltip">Snapchat</span>
-                                </a>
-                                <a href="#" data-color="#FF0000" class="faq-button ">
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <span class="tooltip">YouTube</span>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="footer-column col-md-2 col-4">
-                    <ul>
-                        <h3>روابط هامة</h3>
-                        <li><a href="#">المقاولين </a></li>
-                        <li><a href="#"> المشاريع</a></li>
-                        <li><a href="#">مزودي الخدمات</a></li>
-                        <li><a href="#">المدونة</a></li>
-                        <li><a href="#">الاسئلة الشائعة</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column col-md-2 col-8">
-                    <div>
-                        <h3>تعرف علينا</h3>
-                        <ul>
-                            <li><a href="#">الشركة</a></li>
-                            <li><a href="#">كن شريكا معنا</a></li>
-                            <li><a href="#">سياسة الخصوصية</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>حمل التطبيق</h3>
-                        <p>15% تخفيض للمستخدمين الجدد</p>
-                        <div class="app-buttons">
-                            <div class="app_btn">
-                                <a> google play <i class="fa-brands fa-google-play"></i></a>
-                                <a> app store <i class="fa-brands fa-apple"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-column col-md-4 col-12 footer-column_end  flex-row flex-md-column ">
-                    <div class="contact">
-                        <h3>تواصل معنا</h3>
-                        <ul>
-                            <li class="d-flex  align-items-center gap-3">
-                                <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_200_3669" style="mask-type:luminance" maskUnits="userSpaceOnUse"
-                                        x="0" y="0" width="20" height="20">
-                                        <path d="M19.0026 0.666748H0.335938V19.3334H19.0026V0.666748Z" fill="white" />
-                                    </mask>
-                                    <g mask="url(#mask0_200_3669)">
-                                        <path
-                                            d="M1.89062 6.11117L8.24112 10.5565C8.75537 10.9165 9.01249 11.0965 9.29217 11.1662C9.53921 11.2278 9.79759 11.2278 10.0446 11.1662C10.3243 11.0965 10.5814 10.9165 11.0957 10.5565L17.4462 6.11117M5.62396 16.2223H13.7128C15.0196 16.2223 15.673 16.2223 16.1721 15.968C16.6112 15.7443 16.9681 15.3873 17.1918 14.9483C17.4462 14.4491 17.4462 13.7957 17.4462 12.4889V7.51117C17.4462 6.20438 17.4462 5.55098 17.1918 5.05185C16.9681 4.61281 16.6112 4.25585 16.1721 4.03215C15.673 3.77783 15.0196 3.77783 13.7128 3.77783H5.62396C4.31717 3.77783 3.66378 3.77783 3.16465 4.03215C2.72561 4.25585 2.36864 4.61281 2.14494 5.05185C1.89062 5.55098 1.89062 6.20438 1.89062 7.51117V12.4889C1.89062 13.7957 1.89062 14.4491 2.14494 14.9483C2.36864 15.3873 2.72561 15.7443 3.16465 15.968C3.66378 16.2223 4.31717 16.2223 5.62396 16.2223Z"
-                                            stroke="#31184A" stroke-width="1.55556" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </g>
-                                </svg>
-                                <div>
-                                    <p class="m-0">البريد الالكتروني</p>
-                                    <a href="">Taahud@outlook.sa</a>
-                                </div>
-                            </li>
-                            <li class="d-flex  align-items-center gap-3">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.85458 7.55253C7.39591 8.68001 8.13386 9.73673 9.06842 10.6713C10.003 11.6059 11.0597 12.3438 12.1872 12.8851C12.2841 12.9317 12.3326 12.955 12.394 12.9729C12.612 13.0364 12.8798 12.9908 13.0645 12.8585C13.1164 12.8213 13.1609 12.7769 13.2498 12.688C13.5217 12.416 13.6577 12.2801 13.7944 12.1912C14.31 11.856 14.9746 11.856 15.4902 12.1912C15.6269 12.2801 15.7629 12.416 16.0348 12.688L16.1864 12.8395C16.5997 13.2529 16.8064 13.4595 16.9187 13.6815C17.1419 14.1229 17.1419 14.6443 16.9187 15.0857C16.8064 15.3077 16.5997 15.5143 16.1864 15.9277L16.0638 16.0503C15.6518 16.4622 15.4459 16.6682 15.1659 16.8255C14.8551 17 14.3725 17.1255 14.0161 17.1245C13.695 17.1235 13.4754 17.0612 13.0364 16.9366C10.6771 16.267 8.45086 15.0035 6.59354 13.1462C4.73623 11.2888 3.47275 9.06257 2.8031 6.70326C2.6785 6.26424 2.61619 6.04474 2.61524 5.72356C2.61418 5.36716 2.73968 4.88456 2.91423 4.57383C3.07154 4.2938 3.2775 4.08784 3.68943 3.67591L3.81203 3.55331C4.22538 3.13996 4.43205 2.93329 4.65401 2.82102C5.09545 2.59775 5.61677 2.59775 6.0582 2.82102C6.28017 2.93329 6.48684 3.13996 6.90018 3.55331L7.05175 3.70487C7.32366 3.97679 7.45962 4.11275 7.54851 4.24946C7.88373 4.76504 7.88373 5.42972 7.54851 5.9453C7.45962 6.08201 7.32366 6.21797 7.05175 6.48989C6.96284 6.5788 6.91838 6.62325 6.88117 6.67522C6.74894 6.85988 6.70329 7.12764 6.76685 7.34569C6.78474 7.40705 6.80802 7.45555 6.85458 7.55253Z"
-                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <div>
-                                    <p class="m-0">رقم الاتصال</p>
-                                    <a href="">0530683668</a>
-                                </div>
-                            </li>
-                            <li class="d-flex  align-items-center gap-3">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.66927 10.3891C10.958 10.3891 12.0026 9.34441 12.0026 8.05575C12.0026 6.76708 10.958 5.72241 9.66927 5.72241C8.38061 5.72241 7.33594 6.76708 7.33594 8.05575C7.33594 9.34441 8.38061 10.3891 9.66927 10.3891Z"
-                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M9.66949 17.778C11.225 14.6669 15.8917 12.6589 15.8917 8.44463C15.8917 5.0082 13.1059 2.22241 9.66949 2.22241C6.23305 2.22241 3.44727 5.0082 3.44727 8.44463C3.44727 12.6589 8.11394 14.6669 9.66949 17.778Z"
-                                        stroke="#31184A" stroke-width="1.16667" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <div>
-                                    <p class="m-0">العنوان</p>
-                                    <a href="">جازان، حي الشاطئ طريق الأمير محمد بن ناصر</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom d-flex justify-content-between px-5 align-items-center flex-md-row flex-column">
-            <p class="copyright  m-0">جميع الحقوق محفوظة تعاهد <span id="Copy_year"></span> &copy;</p>
-
-            <div class="payment-methods">
-                <img src="assets/img/tabby.png" alt="Tabby">
-                <img src="assets/img/tamara.png" alt="Tamara">
-                <img src="assets/img/visa.png" alt="Visa">
-                <img src="assets/img/applePAy.png" alt="Apple Pay">
-                <img src="assets/img/Mada_Logo.png" alt="Mada">
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/all.min.js"></script>
-    <script type="module" src="assets/js/main.js"></script>
-
-
-</body>
-
-</html>
