@@ -475,6 +475,7 @@ header .dropdown-item:hover {
 .project-box img {
   width: 50px;
   height: 50px;
+  border-radius: 50%;
 }
 .status-badge {
   display: inline-block;
@@ -2909,4 +2910,9 @@ table .btn-pay:hover {
         display: flex;
         flex-wrap: wrap;
         padding:20px 0;
+    }
+
+
+    .jobApplications-header .fa-star {
+      color: #ffc107;
     }
