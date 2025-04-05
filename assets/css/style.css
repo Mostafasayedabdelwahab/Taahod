@@ -2898,3 +2898,15 @@ table .btn-pay:hover {
   border-radius: 5px;
 }
 /* start paymentMethod_con  */
+
+
+   #fallbackShare {
+        display: none;
+        margin-top: 15px;
+    }
+
+    #customShare {
+        display: flex;
+        flex-wrap: wrap;
+        padding:20px 0;
+    }
