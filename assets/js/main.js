@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
            navigator
              .share({
                title: document.title,
-               text: "شوف الرابط ده!",
+               text: "From Taahod",
                url: currentSharedUrl,
              })
              .then(() => console.log("تمت المشاركة"))
