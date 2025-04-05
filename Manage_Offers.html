@@ -132,10 +132,10 @@
         </div>
     </nav>
 
-    <section class="container Projects-section mt-5 pt-4 fillter-section">
+    <section class="container Projects-section mt-5 pt-2 fillter-section">
         <h2 class="seaMore-title">ادراة العروض</h2>
         <div class="row justify-content-center ">
-            <form class="col-lg-4 col-12 ">
+            <form class="col-lg-3 col-12 ">
                 <!-- ظاهر في الهاتف فقط -->
                 <div class="d-flex d-lg-none mb-3 justify-content-center gap-3 align-items-center">
                     <div class="search-box w-100 ">
@@ -176,7 +176,7 @@
                     </a>
                 </div>
 
-                <div class="filter-container  d-lg-block filter" id="filter">
+                <div class="filter-container  d-lg-block filter p-lg-2" id="filter">
                     <a class="close-btn d-lg-none" id="closeFilter"><i class="fas fa-times"></i><a>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="filter-header">التصنيف</div>
@@ -184,8 +184,9 @@
                             </div>
 
                             <div class="selected-filters">
-                                <span> مؤسسة<a href="" class="btn p-0"><i class="fas fa-times"></i></a></span>
-                                <span> عمل حر <a href="" class="btn p-0"><i class="fas fa-times"></i></a></span>
+                                <span> الاحدث<a href="" class="btn p-0"><i class="fas fa-times"></i></a></span>
+                                <span> السعر الاقل<a href="" class="btn p-0"><i class="fas fa-times"></i></a></span>
+                                <span> الساعة الماضية<a href="" class="btn p-0"><i class="fas fa-times"></i></a></span>
                             </div>
 
                             <!-- ظاهر في اللابتوب فقط -->
@@ -196,55 +197,30 @@
                                     <button type="submit">بحث</button>
                                 </div>
                             </div>
-
-                            <div
-                                class="filter-group mb-2 d-flex flex-column gap-1 align-items-start  justify-content-end">
-                                <label for="citySelect">المدينة</label>
-                                <select id="citySelect" class="form-control" required>
-                                    <option value="">المدينة</option>
-                                    <option value="">الرياض</option>
-                                    <option value="">جدة</option>
-                                    <option value="">مكة</option>
-                                    <option value="">المدينةالمنورة</option>
-                                </select>
-                            </div>
-
                             <div class="filter-group">
-                                <div class="filter-title">التصنيف</div>
+                                <div class="filter-title">عرض حسب</div>
                                 <div class="filter-option">
-                                    <input type="checkbox">
-                                    <label>بناء وتشييد</label>
-                                    <span>(24)</span>
+                                    <input type="radio" name="addTime">
+                                    <label for="addTime">الاحدث </label>
                                 </div>
                                 <div class="filter-option">
-                                    <input type="checkbox">
-                                    <label>اصلاح</label>
-                                    <span>(12)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox" checked>
-                                    <label>التكييف والتبريد</label>
-                                    <span>(48)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox">
-                                    <label>اعمال الطرق وصيانتها</label>
-                                    <span>(35)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox">
-                                    <label>أنظمة الصرف الصحي</label>
-                                    <span>(35)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="checkbox">
-                                    <label>أنظمة المياه</label>
-                                    <span>(35)</span>
+                                    <input type="radio" name="addTime">
+                                    <label for="addTime">الاقدم</label>
                                 </div>
                             </div>
-
                             <div class="filter-group">
-                                <div class="filter-title">المشاريع المضافة خلال</div>
+                                <div class="filter-title">عرض حسب</div>
+                                <div class="filter-option">
+                                    <input type="radio" name="addPrice">
+                                    <label for="addPrice">السعر الاقل </label>
+                                </div>
+                                <div class="filter-option">
+                                    <input type="radio" name="addPrice">
+                                    <label for="addPrice">السعر الاعلي</label>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <div class="filter-title">العروض المضافة خلال</div>
                                 <div class="filter-option">
                                     <input type="radio" name="addpro">
                                     <label for="addpro">الساعة الماضية</label>
@@ -262,55 +238,20 @@
                                 </div>
                                 <div class="filter-option">
                                     <input type="radio" name="addpro">
-                                    <label for="addpro">شهر</label>
-                                    <span>(12)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="radio" name="addpro">
-                                    <label for="addpro">سنة</label>
+                                    <label for="addpro"> شهر او اكثر</label>
                                     <span>(12)</span>
                                 </div>
                             </div>
-
-                            <div class="filter-group">
-                                <div class="filter-title">حالة المشروع</div>
-                                <div class="filter-option">
-                                    <input type="radio" name="state">
-                                    <label for="state">مفتوح</label>
-                                    <span>(5)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="radio" name="state">
-                                    <label for="state">مغلق</label>
-                                    <span>(5)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="radio" name="state">
-                                    <label for="state">اسبوع</label>
-                                    <span>(5)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="radio" name="state">
-                                    <label for="state">شهر</label>
-                                    <span>(5)</span>
-                                </div>
-                                <div class="filter-option">
-                                    <input type="radio" name="state">
-                                    <label for="state">سنة</label>
-                                    <span>(5)</span>
-                                </div>
-                            </div>
-
 
                             <button class="submit-filter" type="submit">تطبيق</button>
 
                 </div>
             </form>
-            <div class="col-lg-8 col-12 p-0">
+            <div class="col-lg-9 col-12 p-0">
                 <div class="row w-100 m-auto">
                     <!-- تكرار الكارت -->
                     <div class="d-flex  col-12 col-md-6   mb-4 ">
-                        <div class="project-box p-3 ">
+                        <div class="project-box p-3 d-flex flex-column ">
                             <div class="d-flex gap-3 flex-row">
                                 <img src="assets/img/user2.png" alt="الصورة الشخصية" class="profile-img">
                                 <h5>م. محمد</h5>
@@ -323,8 +264,8 @@
                                     </span>
                                     <span class="text-muted">
                                         <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-                            
+                                        منذ 20 دقيقة</span>
+
                                     <span>
                                         <i class="fa-solid fa-star"></i>
                                         4.9</span>
@@ -336,140 +277,77 @@
                                     أتمنى أكون جزءًا من
                                     فريقكم وأساهم في نجاحه.</p>
                             </div>
-                            <form action="">
-                                <button type="submit" class="  btn btn-submit  w-100">قبول العرض</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="d-flex  col-12 col-md-6   mb-4 ">
-                        <div class="project-box p-3 ">
-                            <div class="d-flex gap-3 flex-row">
-                                <img src="assets/img/user3.png" alt="الصورة الشخصية" class="profile-img">
-                            <h5>هديل محمد</h5>
+
+                            <div class=" d-flex justify-content-between flex-row ">
+                                <span >
+                                    <span> مدة التنفيذ : </span>
+                                    <strong>45</strong>
+                                    <strong>يوم</strong>
+                                </span>
+
+                                <span >
+                                    <span> صلاحية العرض : </span>
+                                    <strong>90</strong>
+                                    <strong>يوم</strong>
                             </div>
-                            <div class="jobApplications-info gap-3">
-                                <div class="jobApplications-header d-flex justify-content-between ">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-                            
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
+
+                            <span >
+                                <span>قيمة العرض : </span>
+                                <strong>100000</strong>
+                                <svg width="10" height="10" id="Layer_1" data-name="Layer 1"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                    <path class="cls-1"
+                                        d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="cardFileLink d-flex  row mt-1">
+                                    <span>المرفقات : </span>
+                                    <div class="col-6 p-1"><a
+                                            href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf"
+                                            class="file-link" target="_blank">
+                                            <span class="file-icon"></span>
+                                            <span class="file-name">
+                                                <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                                filename-example-with-details.pdf</span>
+                                        </a></div>
+                                    <div class="col-6 p-1"><a href="assets/img/OIP2.jpeg" class="file-link"
+                                            target="_blank">
+                                            <span class="file-icon"></span>
+                                            <span class="file-name">
+                                                <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                                photo-really-example.jpeg</span>
+                                        </a></div>
+                                    <div class="col-6 p-1"><a href="assets/img/OIP.jpeg" class="file-link"
+                                            target="_blank">
+                                            <span class="file-icon"></span>
+                                            <span class="file-name">
+                                                <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                                photo-really-example.jpeg</span>
+                                        </a></div>
+                                    <div class="col-6 p-1"><a
+                                            href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf"
+                                            class="file-link" target="_blank">
+                                            <span class="file-icon"></span>
+                                            <span class="file-name">
+                                                <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                                filename-example-with-details.pdf</span>
+                                        </a></div>
+
                                 </div>
-                            <p class="jobApplications-text">
-                                السلام عليكم، أبحث عن فرصة عمل كفني كهرباء. لدي خبرة تمتد لأكثر من خمس سنوات في مجال
-                                الكهرباء والتقنية، ومهاراتي تشمل
-                                التركيب والصيانة. أعمل بشكل جيد تحت الضغط وأحب التحديات الجديدة.
-                            </p>
-                            </div>
-                            <form action="">
-                                <button type="submit" class="  btn btn-submit  w-100">قبول العرض</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="d-flex  col-12 col-md-6   mb-4 ">
-                        <div class="project-box p-3 ">
-                            <div class="d-flex gap-3 flex-row">
-                                                            <img src="assets/img/user4.png" alt="الصورة الشخصية" class="profile-img">
-
-                                                            <h5>م. سعاد</h5>
-
-                            </div>
-                            <div class="jobApplications-info gap-3">
-                                <div class="jobApplications-header d-flex justify-content-between ">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-                            
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
-                                </div>
-                            <p class="jobApplications-text">
-                                السلام عليكم، أبحث عن فرصة عمل كفني كهرباء. لدي خبرة تمتد لأكثر من خمس سنوات في مجال
-                                الكهرباء والتقنية، ومهاراتي تشمل
-                                التركيب والصيانة. أعمل بشكل جيد تحت الضغط وأحب التحديات الجديدة.
-                            </p>
-                            </div>
-                            <form action="">
-                                <button type="submit" class="  btn btn-submit  w-100">قبول العرض</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="d-flex  col-12 col-md-6   mb-4 ">
-                        <div class="project-box p-3 ">
-                            <div class="d-flex gap-3 flex-row">
-                                                        <img src="assets/img/user5.png" alt="الصورة الشخصية" class="profile-img">
-
-                                                            <h6>م. علي</h6>
 
                             </div>
-                            <div class="jobApplications-info gap-3">
-                                <div class="jobApplications-header d-flex justify-content-between ">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-                            
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
-                                </div>
-                            <p class="jobApplications-text">مرحبا، أنا متحمس للتقديم على وظيفة فني كهرباء. لدي خبرة
-                                في الأنظمة الكهربائية المتقدمة وأستطيع التعامل مع المشاكل الفنية
-                                بكفاءة. أؤمن بأن التعاون مع الفريق هو أساس النجاح وأتطلع للمساهمة في مشاريعكم.</p>
-                            </div>
                             <form action="">
-                                <button type="submit" class="  btn btn-submit  w-100">قبول العرض</button>
+                                <button type="submit" class="  btn btn-submit  w-100 mt-3">قبول العرض</button>
                             </form>
                         </div>
                     </div>
                     <div class="d-flex  col-12 col-md-6   mb-4 ">
-                        <div class="project-box p-3 ">
-                            <div class="d-flex gap-3 flex-row">
-                                <img src="assets/img/user2.png" alt="الصورة الشخصية" class="profile-img">
-                                <h5>م. محمد</h5>
-                            </div>
-                            <div class="jobApplications-info gap-3">
-                                <div class="jobApplications-header d-flex justify-content-between ">
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-file-contract"></i>
-                                        1 تم الاستلام
-                                    </span>
-                                    <span class="text-muted">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-                            
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9</span>
-                                </div>
-                                <p class="jobApplications-text">أهلًا، أنا مهتم بوظيفة في كهرباء. عندي خبرة في الصيانة
-                                    والتركيب، وقد عملت على مشاريع
-                                    تتطلب مهارات فنية عالية. أقدر أشتغل بشكل جيد مع الفريق وأضمن سير العمل بدون أي
-                                    مشاكل.
-                                    أتمنى أكون جزءًا من
-                                    فريقكم وأساهم في نجاحه.</p>
-                            </div>
-                            <form action="">
-                                <button type="submit" class="  btn btn-submit  w-100">قبول العرض</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="d-flex  col-12 col-md-6   mb-4 ">
-                        <div class="project-box p-3 ">
+                        <div class="project-box p-3 d-flex flex-column">
                             <div class="d-flex gap-3 flex-row">
                                 <img src="assets/img/user3.png" alt="الصورة الشخصية" class="profile-img">
                                 <h5>هديل محمد</h5>
@@ -482,8 +360,8 @@
                                     </span>
                                     <span class="text-muted">
                                         <i class="fa-solid fa-calendar-days"></i>
-                                        منذ ساعتين</span>
-                    
+                                        منذ ساعة</span>
+
                                     <span>
                                         <i class="fa-solid fa-star"></i>
                                         4.9</span>
@@ -494,9 +372,437 @@
                                     التركيب والصيانة. أعمل بشكل جيد تحت الضغط وأحب التحديات الجديدة.
                                 </p>
                             </div>
+
+
+                            <div class=" d-flex justify-content-between flex-row ">
+                                <span >
+                                    <span> مدة التنفيذ : </span>
+                                    <strong>90</strong>
+                                    <strong>يوم</strong>
+                                </span>
+
+                                <span >
+                                    <span> صلاحية العرض : </span>
+                                    <strong>120</strong>
+                                    <strong>يوم</strong>
+                            </div>
+
+                            <span >
+                                <span>قيمة العرض : </span>
+                                <strong>150000</strong>
+                                <svg width="10" height="10" id="Layer_1" data-name="Layer 1"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                    <path class="cls-1"
+                                        d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="cardFileLink d-flex  row mt-1">
+                                    <span>المرفقات : </span>
+                                    <div class="col-6 p-1"><a
+                                            href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf"
+                                            class="file-link" target="_blank">
+                                            <span class="file-icon"></span>
+                                            <span class="file-name">
+                                                <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                                filename-example-with-details.pdf</span>
+                                        </a></div>
+                                    <div class="col-6 p-1"><a href="assets/img/OIP2.jpeg" class="file-link"
+                                            target="_blank">
+                                            <span class="file-icon"></span>
+                                            <span class="file-name">
+                                                <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                                photo-really-example.jpeg</span>
+                                        </a></div>
+                                    <div class="col-6 p-1"><a href="assets/img/OIP.jpeg" class="file-link"
+                                            target="_blank">
+                                            <span class="file-icon"></span>
+                                            <span class="file-name">
+                                                <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                                photo-really-example.jpeg</span>
+                                        </a></div>
+                                    <div class="col-6 p-1"><a
+                                            href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf"
+                                            class="file-link" target="_blank">
+                                            <span class="file-icon"></span>
+                                            <span class="file-name">
+                                                <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                                filename-example-with-details.pdf</span>
+                                        </a></div>
+
+                                </div>
+
+                            </div>
                             <form action="">
-                                <button type="submit" class="  btn btn-submit  w-100">قبول العرض</button>
+                                <button type="submit" class="  btn btn-submit  w-100 mt-3">قبول العرض</button>
                             </form>
+                        </div>
+                    </div>
+                    <div class="d-flex  col-12 col-md-6   mb-4 ">
+                        <div class="project-box p-3 d-flex flex-column">
+                            <div class="d-flex gap-3 flex-row">
+                                <img src="assets/img/user4.png" alt="الصورة الشخصية" class="profile-img">
+
+                                <h5>م. سعاد</h5>
+
+                            </div>
+                            <div class="jobApplications-info gap-3">
+                                <div class="jobApplications-header d-flex justify-content-between ">
+                                    <span class="text-muted">
+                                        <i class="fa-solid fa-file-contract"></i>
+                                        1 تم الاستلام
+                                    </span>
+                                    <span class="text-muted" >
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        منذ ساعه وعشرون دقيقة</span>
+
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        4.9</span>
+                                </div>
+                                <p class="jobApplications-text">
+                                    السلام عليكم، أبحث عن فرصة عمل كفني كهرباء. لدي خبرة تمتد لأكثر من خمس سنوات في مجال
+                                    الكهرباء والتقنية، ومهاراتي تشمل
+                                    التركيب والصيانة. أعمل بشكل جيد تحت الضغط وأحب التحديات الجديدة.
+                                </p>
+                            </div>
+                        <div class=" d-flex justify-content-between flex-row ">
+                            <span >
+                                <span> مدة التنفيذ : </span>
+                                <strong>90</strong>
+                                <strong>يوم</strong>
+                            </span>
+                        
+                            <span >
+                                <span> صلاحية العرض : </span>
+                                <strong>120</strong>
+                                <strong>يوم</strong>
+                        </div>
+                        
+                        <span >
+                            <span>قيمة العرض : </span>
+                            <strong>150000</strong>
+                            <svg width="10" height="10" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1124.14 1256.39">
+                                <path class="cls-1"
+                                    d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z">
+                                </path>
+                                <path class="cls-1"
+                                    d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <div>
+                            <div class="cardFileLink d-flex  row mt-1">
+                                <span>المرفقات : </span>
+                                <div class="col-6 p-1"><a href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf" class="file-link"
+                                        target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                            filename-example-with-details.pdf</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/img/OIP2.jpeg" class="file-link" target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                            photo-really-example.jpeg</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/img/OIP.jpeg" class="file-link" target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                            photo-really-example.jpeg</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf" class="file-link"
+                                        target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                            filename-example-with-details.pdf</span>
+                                    </a></div>
+                        
+                            </div>
+                        
+                        </div>
+                        <form action="">
+                            <button type="submit" class="  btn btn-submit  w-100 mt-3">قبول العرض</button>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="d-flex  col-12 col-md-6   mb-4 ">
+                        <div class="project-box p-3 d-flex flex-column">
+                            <div class="d-flex gap-3 flex-row">
+                                <img src="assets/img/user5.png" alt="الصورة الشخصية" class="profile-img">
+
+                                <h6>م. علي</h6>
+
+                            </div>
+                            <div class="jobApplications-info gap-3">
+                                <div class="jobApplications-header d-flex justify-content-between ">
+                                    <span class="text-muted">
+                                        <i class="fa-solid fa-file-contract"></i>
+                                        1 تم الاستلام
+                                    </span>
+                                    <span class="text-muted">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        منذ ساعتين</span>
+
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        4.9</span>
+                                </div>
+                                <p class="jobApplications-text">مرحبا، أنا متحمس للتقديم على وظيفة فني كهرباء. لدي خبرة
+                                    في الأنظمة الكهربائية المتقدمة وأستطيع التعامل مع المشاكل الفنية
+                                    بكفاءة. أؤمن بأن التعاون مع الفريق هو أساس النجاح وأتطلع للمساهمة في مشاريعكم.</p>
+                            </div>
+                        <div class=" d-flex justify-content-between flex-row ">
+                            <span>
+                                <span> مدة التنفيذ : </span>
+                                <strong>90</strong>
+                                <strong>يوم</strong>
+                            </span>
+                        
+                            <span >
+                                <span> صلاحية العرض : </span>
+                                <strong>120</strong>
+                                <strong>يوم</strong>
+                        </div>
+                        
+                        <span>
+                            <span>قيمة العرض : </span>
+                            <strong>150000</strong>
+                            <svg width="10" height="10" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1124.14 1256.39">
+                                <path class="cls-1"
+                                    d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z">
+                                </path>
+                                <path class="cls-1"
+                                    d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <div>
+                            <div class="cardFileLink d-flex  row mt-1">
+                                <span>المرفقات : </span>
+                                <div class="col-6 p-1"><a href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf" class="file-link"
+                                        target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                            filename-example-with-details.pdf</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/img/OIP2.jpeg" class="file-link" target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                            photo-really-example.jpeg</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/img/OIP.jpeg" class="file-link" target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                            photo-really-example.jpeg</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf" class="file-link"
+                                        target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                            filename-example-with-details.pdf</span>
+                                    </a></div>
+                        
+                            </div>
+                        
+                        </div>
+                        <form action="">
+                            <button type="submit" class="  btn btn-submit  w-100 mt-3">قبول العرض</button>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="d-flex  col-12 col-md-6   mb-4 ">
+                        <div class="project-box p-3 d-flex flex-column">
+                            <div class="d-flex gap-3 flex-row">
+                                <img src="assets/img/user2.png" alt="الصورة الشخصية" class="profile-img">
+                                <h5>م. محمد</h5>
+                            </div>
+                            <div class="jobApplications-info gap-3">
+                                <div class="jobApplications-header d-flex justify-content-between ">
+                                    <span class="text-muted">
+                                        <i class="fa-solid fa-file-contract"></i>
+                                        1 تم الاستلام
+                                    </span>
+                                    <span class="text-muted">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        منذ 5 ساعات</span>
+
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        4.9</span>
+                                </div>
+                                <p class="jobApplications-text">أهلًا، أنا مهتم بوظيفة في كهرباء. عندي خبرة في الصيانة
+                                    والتركيب، وقد عملت على مشاريع
+                                    تتطلب مهارات فنية عالية. أقدر أشتغل بشكل جيد مع الفريق وأضمن سير العمل بدون أي
+                                    مشاكل.
+                                    أتمنى أكون جزءًا من
+                                    فريقكم وأساهم في نجاحه.</p>
+                            </div>
+                        <div class=" d-flex justify-content-between flex-row ">
+                            <span>
+                                <span> مدة التنفيذ : </span>
+                                <strong>90</strong>
+                                <strong>يوم</strong>
+                            </span>
+                        
+                            <span >
+                                <span> صلاحية العرض : </span>
+                                <strong>120</strong>
+                                <strong>يوم</strong>
+                        </div>
+                        
+                        <span >
+                            <span>قيمة العرض : </span>
+                            <strong>150000</strong>
+                            <svg width="10" height="10" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1124.14 1256.39">
+                                <path class="cls-1"
+                                    d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z">
+                                </path>
+                                <path class="cls-1"
+                                    d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <div>
+                            <div class="cardFileLink d-flex  row mt-1">
+                                <span>المرفقات : </span>
+                                <div class="col-6 p-1"><a href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf" class="file-link"
+                                        target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                            filename-example-with-details.pdf</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/img/OIP2.jpeg" class="file-link" target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                            photo-really-example.jpeg</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/img/OIP.jpeg" class="file-link" target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                            photo-really-example.jpeg</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf" class="file-link"
+                                        target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                            filename-example-with-details.pdf</span>
+                                    </a></div>
+                        
+                            </div>
+                        
+                        </div>
+                        <form action="">
+                            <button type="submit" class="  btn btn-submit  w-100 mt-3">قبول العرض</button>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="d-flex  col-12 col-md-6   mb-4 ">
+                        <div class="project-box p-3 d-flex flex-column">
+                            <div class="d-flex gap-3 flex-row">
+                                <img src="assets/img/user3.png" alt="الصورة الشخصية" class="profile-img">
+                                <h5>هديل محمد</h5>
+                            </div>
+                            <div class="jobApplications-info gap-3">
+                                <div class="jobApplications-header d-flex justify-content-between ">
+                                    <span class="text-muted">
+                                        <i class="fa-solid fa-file-contract"></i>
+                                        1 تم الاستلام
+                                    </span>
+                                    <span class="text-muted">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        منذ يوم</span>
+
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        4.9</span>
+                                </div>
+                                <p class="jobApplications-text">
+                                    السلام عليكم، أبحث عن فرصة عمل كفني كهرباء. لدي خبرة تمتد لأكثر من خمس سنوات في مجال
+                                    الكهرباء والتقنية، ومهاراتي تشمل
+                                    التركيب والصيانة. أعمل بشكل جيد تحت الضغط وأحب التحديات الجديدة.
+                                </p>
+                            </div>
+                        <div class=" d-flex justify-content-between flex-row ">
+                            <span >
+                                <span> مدة التنفيذ : </span>
+                                <strong>90</strong>
+                                <strong>يوم</strong>
+                            </span>
+                        
+                            <span>
+                                <span> صلاحية العرض : </span>
+                                <strong>120</strong>
+                                <strong>يوم</strong>
+                        </div>
+                        
+                        <span >
+                            <span>قيمة العرض : </span>
+                            <strong>150000</strong>
+                            <svg width="10" height="10" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1124.14 1256.39">
+                                <path class="cls-1"
+                                    d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z">
+                                </path>
+                                <path class="cls-1"
+                                    d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <div>
+                            <div class="cardFileLink d-flex  row mt-1">
+                                <span>المرفقات : </span>
+                                <div class="col-6 p-1"><a href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf" class="file-link"
+                                        target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                            filename-example-with-details.pdf</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/img/OIP2.jpeg" class="file-link" target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                            photo-really-example.jpeg</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/img/OIP.jpeg" class="file-link" target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-image text-primary file-icon"></i>
+                                            photo-really-example.jpeg</span>
+                                    </a></div>
+                                <div class="col-6 p-1"><a href="assets/833481924-القواعد-والمعايير-الفنية-للبناء.pdf" class="file-link"
+                                        target="_blank">
+                                        <span class="file-icon"></span>
+                                        <span class="file-name">
+                                            <i class="fa-solid fa-file-pdf text-danger file-icon"></i>
+                                            filename-example-with-details.pdf</span>
+                                    </a></div>
+                        
+                            </div>
+                        
+                        </div>
+                        <form action="">
+                            <button type="submit" class="  btn btn-submit  w-100 mt-3">قبول العرض</button>
+                        </form>
                         </div>
                     </div>
                 </div>
@@ -665,7 +971,6 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/all.min.js"></script>
     <script src="assets/js/main.js"></script>
-
 
 
 </body>
