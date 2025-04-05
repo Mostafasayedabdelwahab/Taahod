@@ -471,6 +471,7 @@ header .dropdown-item:hover {
   padding: 20px;
   box-shadow: var(--shadow--);
   justify-content: space-between;
+  width: 100%;
 }
 .project-box img {
   width: 50px;
@@ -1039,7 +1040,7 @@ input[type="checkbox"] {
 
 .fillter-section .filter-container .filter-group {
   border-top: 1px solid #d1d1d1;
-  padding: 15px 0;
+  padding: 8px 0;
 }
 
 .fillter-section .filter-container .search-box-con {
@@ -2915,4 +2916,37 @@ table .btn-pay:hover {
 
     .jobApplications-header .fa-star {
       color: #ffc107;
+    }
+
+
+
+   
+
+   .file-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--Text-color---color--);
+      border: 1px solid var(--main-color--);
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.2s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      direction: ltr;
+    }
+
+    .file-link:hover {
+      background-color: var(--Text2-color--);
+      border: 1px solid #fff;
+      color: white;
+    }
+
+    .file-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 100%;
     }
