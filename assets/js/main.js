@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
      let currentSharedUrl = "";
      document.querySelectorAll(".btn-project-details + a").forEach((btn) => {
        btn.addEventListener("click", function () {
-         currentSharedUrl = "http://127.0.0.1:5500/serviceProviders.html";
+         currentSharedUrl = "https://mostafasayedabdelwahab.github.io/Taahod/projectDetails.html";
 
          // لو المتصفح بيدعم Web Share API
          if (navigator.share) {
