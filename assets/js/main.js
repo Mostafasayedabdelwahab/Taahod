@@ -74,4 +74,87 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("filter").classList.remove("open");
     });
   }
+
+
+// share
+   if (document.querySelectorAll(".btn-project-details + a")) {
+     let currentSharedUrl = "";
+     document.querySelectorAll(".btn-project-details + a").forEach((btn) => {
+       btn.addEventListener("click", function () {
+         currentSharedUrl = "http://127.0.0.1:5500/serviceProviders.html";
+
+         // لو المتصفح بيدعم Web Share API
+         if (navigator.share) {
+           navigator
+             .share({
+               title: document.title,
+               text: "شوف الرابط ده!",
+               url: currentSharedUrl,
+             })
+             .then(() => console.log("تمت المشاركة"))
+             .catch((err) => console.log("فشل المشاركة", err));
+         } else {
+           // لو مش بيدعم → تحديث روابط الشبكات الاجتماعية
+
+           let shareDiv = document.getElementById("customShare");
+           if (!btn.parentElement.parentElement.querySelector("#customShare")) {
+             shareDiv = document.createElement("div");
+             shareDiv.id = "customShare";
+             btn.parentElement.parentElement.appendChild(shareDiv); // إضافة الـ div إلى الـ body
+           }
+
+           shareDiv.innerHTML = `
+                             <a id="shareFb" class="faq-button text-dark" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                             <a id="shareLn" class="faq-button text-dark" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                             <a id="shareTt" class="faq-button text-dark" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                             <a id="shareTw" class="faq-button text-dark" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                             <a id="shareSc" class="faq-button text-dark" target="_blank"> <i class="fa-brands fa-snapchat"></i> </a>
+                             <a id="shareWa" class="faq-button text-dark" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                             <a id="shareIg" class="faq-button text-dark" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                             <a id="shareTg" class="faq-button text-dark" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+    
+                             <button  class="faq-button text-dark" onclick="copySharedLink()"><i class="fa-solid fa-copy"></i></button>
+                        `;
+
+           // تحديث روابط التطبيقات
+           document.getElementById(
+             "shareFb"
+           ).href = `https://www.facebook.com/sharer/sharer.php?u=${currentSharedUrl}`;
+           document.getElementById(
+             "shareLn"
+           ).href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentSharedUrl}`;
+           document.getElementById(
+             "shareTt"
+           ).href = `https://www.tiktok.com/share?url=${currentSharedUrl}`;
+           document.getElementById(
+             "shareTw"
+           ).href = `https://twitter.com/intent/tweet?url=${currentSharedUrl}&text=شوف الرابط ده!`;
+           document.getElementById(
+             "shareSc"
+           ).href = `https://www.snapchat.com/scan?attachmentUrl=${currentSharedUrl}`;
+           document.getElementById(
+             "shareWa"
+           ).href = `https://api.whatsapp.com/send?text=${currentSharedUrl}`;
+           document.getElementById(
+             "shareIg"
+           ).href = `https://www.instagram.com/?url=${currentSharedUrl}`;
+           document.getElementById(
+             "shareTg"
+           ).href = `https://t.me/share/url?url=${currentSharedUrl}&text=شوف الرابط ده!`;
+         }
+       });
+     });
+
+     // وظيفة نسخ الرابط
+     function copySharedLink() {
+       navigator.clipboard
+         .writeText(currentSharedUrl)
+         .then(() => {
+           alert("تم نسخ الرابط ✅");
+         })
+         .catch(() => {
+           alert("فشل النسخ ❌");
+         });
+     }
+   }
 });
