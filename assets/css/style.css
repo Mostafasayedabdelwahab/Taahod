@@ -140,10 +140,9 @@ header .dropdown-menu[data-bs-popper] {
   }
 }
 
-
 .dropdownForLogin .dropdown-item {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
 }
 header .dropdown-item {
   transition: var(--transition);
@@ -2901,52 +2900,84 @@ table .btn-pay:hover {
 }
 /* start paymentMethod_con  */
 
+#fallbackShare {
+  display: none;
+  margin-top: 15px;
+}
 
-   #fallbackShare {
-        display: none;
-        margin-top: 15px;
-    }
+#customShare {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
 
-    #customShare {
-        display: flex;
-        flex-wrap: wrap;
-        padding:20px 0;
-    }
+.jobApplications-header .fa-star {
+  color: #ffc107;
+}
 
+.cardFileLink .file-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--Text-color---color--);
+  border: 1px solid var(--main-color--);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+}
 
-    .jobApplications-header .fa-star {
-      color: #ffc107;
-    }
+.cardFileLink .file-link:hover {
+  background-color: var(--Text2-color--);
+  border: 1px solid #fff;
+  color: white;
+}
 
+.cardFileLink .file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
 
+/* new */
 
-   
+#SinUpForm .radio-buttons {
+  display: flex;
+  gap: 10px;
+}
 
-  .cardFileLink  .file-link {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--Text-color---color--);
-      border: 1px solid var(--main-color--);
-      padding: 8px 12px;
-      border-radius: 8px;
-      transition: background 0.2s;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      direction: ltr;
-    }
-
-    .cardFileLink .file-link:hover {
-      background-color: var(--Text2-color--);
-      border: 1px solid #fff;
-      color: white;
-    }
-
-    .cardFileLink .file-name {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: block;
-      width: 100%;
-    }
+#SinUpForm .radio-btn {
+  padding: 10px;
+  border: 2px solid var(--main-color--);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  justify-content: center;
+}
+.buttonsForAccountType > div {
+  min-width: 132px;
+}
+#SinUpForm input[type="radio"]:checked + .radio-btn {
+  background-color: var(--main-color--);
+  color: white;
+}
+#SinUpForm .radio-btn svg {
+ width: 20px;
+ height: 20px;
+}
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Business"]  path {
+ stroke: #fff;
+}
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Contractor"]  path ,
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Design"]  path ,
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Engineer"]  path ,
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Engineering_Office"]  path ,
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Individual"]  path {
+ fill: #fff;
+}
+/* new */
