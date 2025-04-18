@@ -72,10 +72,11 @@ export function initModals() {
             document
               .getElementById("modalSendOverlay")
               .classList.remove("active");
+            document.getElementById("modalSendOverlay").classList.add("closed");
             modal.style.display = "none";
           }
+          window.location.href = "login.html";
         });
-
       // أغلق المودال عند الضغط خارج المحتوى
       window.addEventListener("click", function (event) {
         let modalContent = document.querySelector(".modalSending");
@@ -86,6 +87,7 @@ export function initModals() {
               .classList.remove("active");
             modalContent.style.display = "none";
           }
+          window.location.href = "login.html";
         }
       });
     }
@@ -94,6 +96,7 @@ export function initModals() {
       document
         .getElementById("open-modalSending")
         .addEventListener("click", openModal);
+        
     }
 
     // صفحة نفاذ فتح المودال تلقائيًا إذا كنا في
@@ -105,9 +108,19 @@ export function initModals() {
           }, 5000);
         }
         setTimeout(function () {
-          window.location.href = "IndividualSinupPassword.html"; // استبدلURL بالرابط المطلوب
+          window.location.href = "creatPassword.html"; // استبدلURL بالرابط المطلوب
         }, 8500); // 10000 ميلي ثانية = 10 ثواني
       };
     }
+    if (document.getElementById("OpenModal_Form")) {
+      document
+        .getElementById("OpenModal_Form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          openModal();
+        });
+    }
   }
+
+
 }
