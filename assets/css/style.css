@@ -2952,32 +2952,48 @@ table .btn-pay:hover {
 }
 
 #SinUpForm .radio-btn {
-  padding: 10px;
+  padding: 5px;
   border: 2px solid var(--main-color--);
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
   justify-content: center;
+  font-size: 14px;
 }
 .buttonsForAccountType > div {
-  min-width: 132px;
+  min-width: 105px;
 }
+
 #SinUpForm input[type="radio"]:checked + .radio-btn {
   background-color: var(--main-color--);
   color: white;
 }
 #SinUpForm .radio-btn svg {
- width: 20px;
- height: 20px;
+  width: 15px;
+  height: 15px;
 }
-#SinUpForm input[type="radio"]:checked + .radio-btn[for="Business"]  path {
- stroke: #fff;
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Business"] path {
+  stroke: #fff;
 }
-#SinUpForm input[type="radio"]:checked + .radio-btn[for="Contractor"]  path ,
-#SinUpForm input[type="radio"]:checked + .radio-btn[for="Design"]  path ,
-#SinUpForm input[type="radio"]:checked + .radio-btn[for="Engineer"]  path ,
-#SinUpForm input[type="radio"]:checked + .radio-btn[for="Engineering_Office"]  path ,
-#SinUpForm input[type="radio"]:checked + .radio-btn[for="Individual"]  path {
- fill: #fff;
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Contractor"] path,
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Design"] path,
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Engineer"] path,
+#SinUpForm
+  input[type="radio"]:checked
+  + .radio-btn[for="Engineering_Office"]
+  path,
+#SinUpForm input[type="radio"]:checked + .radio-btn[for="Individual"] path {
+  fill: #fff;
+}
+input[type="radio"] {
+  accent-color: #07997c;
+  width: 15px;
+}
+.file-label {
+  cursor: pointer;
+}
+#checkboxAreTrue {
+  display: none;
+  margin-top: 10px;
 }
 /* new */
