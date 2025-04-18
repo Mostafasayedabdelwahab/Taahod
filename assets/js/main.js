@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("skillsForm")) {
     import("./skillsForm.js").then((module) => module.initskillsForm());
   }
+  if (document.getElementById("skillsForm2")) {
+    import("./skillsForm2.js").then((module) => module.initskillsForm2());
+  }
+  if (document.getElementById("skillsForm2")) {
+    import("./skillsForm2.js").then((module) => module.initskillsForm3());
+  }
 
   // تفعيل مكتبة intl-tel-input
   if (document.querySelector("#phoneWithCode")) {
