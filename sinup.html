@@ -140,7 +140,7 @@
                 <div class="col-12 mb-2 d-flex flex-column gap-1 align-items-start ">
                     <label>الاستمرار كـ :</label>
                     <div class="buttonsForAccountType d-flex justify-content-center w-100 flex-wrap gap-2">
-                        <div>
+                        <div style="min-width: 80px;">
                             <input type="radio" id="Individual" name="accountType" value="Individual" required hidden>
                             <label for="Individual" class="d-flex align-items-center gap-2 radio-btn">
                                 <svg width="20" height="20" viewBox="0 0 25 24" fill="none"
@@ -153,7 +153,7 @@
                         </div>
 
 
-                        <div>
+                        <div style="min-width: 80px;">
                             <input type="radio" id="Contractor" name="accountType" value="Contractor" required hidden>
                             <label for="Contractor" class="d-flex align-items-center gap-2 radio-btn">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
@@ -164,20 +164,19 @@
                                 </svg>
                                 مقاول
                         </div>
-                        <div>
+                        <div style="min-width: 80px;">
                             <input type="radio" id="Vendor" name="accountType" value="Vendor" required hidden>
                             <label for="Vendor" class="d-flex align-items-center gap-2 radio-btn">
                                 <i class="fa-solid fa-boxes-packing"></i>
                                 مورد
                         </div>
-
-                        <div>
+                        <div style="min-width: 80px;">
                             <input type="radio" id="conveyor" name="accountType" value="conveyor" required hidden>
                             <label for="conveyor" class="d-flex align-items-center gap-2 radio-btn">
                                 <i class="fa-solid fa-van-shuttle"></i>
                                 ناقل
                         </div>
-                        <div>
+                        <div style="min-width: 80px;">
                             <input type="radio" id="Engineer" name="accountType" value="Engineer" required hidden>
                             <label for="Engineer" class="d-flex align-items-center gap-2 radio-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 3750 4495">
@@ -188,35 +187,37 @@
                                 </svg>
                                 مهندسين
                         </div>
-                        <div>
+                        <div >
                             <input type="radio" id="technician" name="accountType" value="technician" required hidden>
                             <label for="technician" class="d-flex align-items-center gap-2 radio-btn">
                                 <i class="fa-solid fa-user-tie"></i>
                                 فنيين
                         </div>
-                    <div>
-                        <input type="radio" id="Real_Estate_Developer" name="accountType" value="Real_Estate_Developer" required hidden>
-                        <label for="Real_Estate_Developer" class="d-flex align-items-center gap-2 radio-btn">
-                            <i class="fa-solid fa-ruler-combined"></i>
-                            مطور عقاري
-                    </div>
-                    <div>
-                        <input type="radio" id="Business" name="accountType" value="Business" required hidden>
-                        <label for="Business" class="d-flex align-items-center gap-2 radio-btn">
-                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M18.7227 20.2H6.72266C5.02266 20.2 3.72266 18.9 3.72266 17.2V9.2C3.72266 7.5 5.02266 6.2 6.72266 6.2H18.7227C20.4227 6.2 21.7227 7.5 21.7227 9.2V17.2C21.7227 18.8 20.3227 20.2 18.7227 20.2Z"
-                                    stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                </path>
-                                <path
-                                    d="M8.62266 13.9V10.9M16.7227 13.9V10.9M3.72266 12.2H21.7227M14.1227 3.8H11.1227C10.5227 3.8 10.1227 4.2 10.1227 4.8V6.2H15.1227V4.8C15.1227 4.2 14.7227 3.8 14.1227 3.8Z"
-                                    stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                </path>
-                            </svg>
-                            حساب اعمال
-                    </div>
+                        <div >
+                            <input type="radio" id="Real_Estate_Developer" name="accountType"
+                                value="Real_Estate_Developer" required hidden>
+                            <label for="Real_Estate_Developer" class="d-flex align-items-center gap-2 radio-btn">
+                                <i class="fa-solid fa-ruler-combined"></i>
+                                مطور عقاري
+                        </div>
+                        <div>
+                            <input type="radio" id="Business" name="accountType" value="Business" required hidden>
+                            <label for="Business" class="d-flex align-items-center gap-2 radio-btn">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.7227 20.2H6.72266C5.02266 20.2 3.72266 18.9 3.72266 17.2V9.2C3.72266 7.5 5.02266 6.2 6.72266 6.2H18.7227C20.4227 6.2 21.7227 7.5 21.7227 9.2V17.2C21.7227 18.8 20.3227 20.2 18.7227 20.2Z"
+                                        stroke="#333333" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path
+                                        d="M8.62266 13.9V10.9M16.7227 13.9V10.9M3.72266 12.2H21.7227M14.1227 3.8H11.1227C10.5227 3.8 10.1227 4.2 10.1227 4.8V6.2H15.1227V4.8C15.1227 4.2 14.7227 3.8 14.1227 3.8Z"
+                                        stroke="#333333" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                                حساب اعمال
+                        </div>
                         <div>
                             <input type="radio" id="Design" name="accountType" value="Design" required hidden>
                             <label for="Design" class="d-flex align-items-center gap-2 radio-btn">
@@ -245,6 +246,13 @@
                                         fill="#31184A"></path>
                                 </svg>
                                 مكتب هندسي
+                        </div>
+                        <div>
+                            <input type="radio" id="Leasing_Sector" name="accountType" value="Leasing_Sector" required
+                                hidden>
+                            <label for="Leasing_Sector" class="d-flex align-items-center gap-2 radio-btn">
+                                <i class="fa-solid fa-industry"></i>
+                                قطاع التأجير
                         </div>
                     </div>
                 </div>
@@ -445,6 +453,9 @@
                     break;
                 case 'Engineering_Office':
                     window.location.href = 'registerEngineering_Office.html';
+                    break;
+                case 'Leasing_Sector':
+                    window.location.href = 'registerLeasing_Sector.html';
                     break;
                 default:
                     alert('نوع الحساب غير معروف!');
