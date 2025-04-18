@@ -39,7 +39,7 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="assets/img/head-logo.png" alt="شعار">
                 </a>
-    
+
                 <!-- زر التبديل للجوال -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <label for="burger" class="burger">
@@ -49,7 +49,7 @@
                         <span></span>
                     </label>
                 </button>
-    
+
                 <!-- القوائم -->
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav  p-0">
@@ -69,7 +69,7 @@
                 <!-- أزرار التسجيل -->
                 <div class=" login-btns d-lg-flex d-none">
                     <a href="sinup.html" class="btn  me-2">التسجيل </a>
-    
+
                     <a href="login.html" class="btn  me-2">تسجيل الدخول</a>
                 </div>
             </div>
@@ -138,7 +138,7 @@
                     </select>
                 </div>
                 <div class="col-12 mb-2 d-flex flex-column gap-1 align-items-start ">
-                    <label>اختار نوع الحساب:<span class="text-danger fs-4">*</span></label>
+                    <label>الاستمرار كـ :</label>
                     <div class="buttonsForAccountType d-flex justify-content-center w-100 flex-wrap gap-2">
                         <div>
                             <input type="radio" id="Individual" name="accountType" value="Individual" required hidden>
@@ -151,24 +151,7 @@
                                 </svg>
                                 فرد
                         </div>
-                        <div>
-                            <input type="radio" id="Business" name="accountType" value="Business" required hidden>
-                            <label for="Business" class="d-flex align-items-center gap-2 radio-btn">
-                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M18.7227 20.2H6.72266C5.02266 20.2 3.72266 18.9 3.72266 17.2V9.2C3.72266 7.5 5.02266 6.2 6.72266 6.2H18.7227C20.4227 6.2 21.7227 7.5 21.7227 9.2V17.2C21.7227 18.8 20.3227 20.2 18.7227 20.2Z"
-                                        stroke="#333333" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                    </path>
-                                    <path
-                                        d="M8.62266 13.9V10.9M16.7227 13.9V10.9M3.72266 12.2H21.7227M14.1227 3.8H11.1227C10.5227 3.8 10.1227 4.2 10.1227 4.8V6.2H15.1227V4.8C15.1227 4.2 14.7227 3.8 14.1227 3.8Z"
-                                        stroke="#333333" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                    </path>
-                                </svg>
-                                حساب اعمال
-                        </div>
+
 
                         <div>
                             <input type="radio" id="Contractor" name="accountType" value="Contractor" required hidden>
@@ -186,13 +169,6 @@
                             <label for="Vendor" class="d-flex align-items-center gap-2 radio-btn">
                                 <i class="fa-solid fa-boxes-packing"></i>
                                 مورد
-                        </div>
-                        <div>
-                            <input type="radio" id="Real_Estate_Developer" name="accountType"
-                                value="Real_Estate_Developer" required hidden>
-                            <label for="Real_Estate_Developer" class="d-flex align-items-center gap-2 radio-btn">
-                                <i class="fa-solid fa-ruler-combined"></i>
-                                مطور عقاري
                         </div>
 
                         <div>
@@ -218,7 +194,29 @@
                                 <i class="fa-solid fa-user-tie"></i>
                                 فنيين
                         </div>
-
+                    <div>
+                        <input type="radio" id="Real_Estate_Developer" name="accountType" value="Real_Estate_Developer" required hidden>
+                        <label for="Real_Estate_Developer" class="d-flex align-items-center gap-2 radio-btn">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            مطور عقاري
+                    </div>
+                    <div>
+                        <input type="radio" id="Business" name="accountType" value="Business" required hidden>
+                        <label for="Business" class="d-flex align-items-center gap-2 radio-btn">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.7227 20.2H6.72266C5.02266 20.2 3.72266 18.9 3.72266 17.2V9.2C3.72266 7.5 5.02266 6.2 6.72266 6.2H18.7227C20.4227 6.2 21.7227 7.5 21.7227 9.2V17.2C21.7227 18.8 20.3227 20.2 18.7227 20.2Z"
+                                    stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M8.62266 13.9V10.9M16.7227 13.9V10.9M3.72266 12.2H21.7227M14.1227 3.8H11.1227C10.5227 3.8 10.1227 4.2 10.1227 4.8V6.2H15.1227V4.8C15.1227 4.2 14.7227 3.8 14.1227 3.8Z"
+                                    stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                </path>
+                            </svg>
+                            حساب اعمال
+                    </div>
                         <div>
                             <input type="radio" id="Design" name="accountType" value="Design" required hidden>
                             <label for="Design" class="d-flex align-items-center gap-2 radio-btn">
@@ -419,10 +417,10 @@
             // توجيه حسب نوع الحساب
             switch (selectedType) {
                 case 'Business':
-                    window.location.href = 'registerBusiness.html';
+                    window.location.href = 'BusinessSinupPassword.html';
                     break;
                 case 'Individual':
-                    window.location.href = 'registerIndividual.html';
+                    window.location.href = 'IndividualSinupnvaz.html';
                     break;
                 case 'Contractor':
                     window.location.href = 'registerContractor.html';
