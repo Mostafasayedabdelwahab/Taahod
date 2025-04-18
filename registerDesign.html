@@ -237,38 +237,43 @@
     </header>
 
     <div class="container login-container d-flex justify-content-center align-items-center h-100">
-        <div class="login-section text-center  ">
+            <div class="login-section text-center mx-0 w-100 px-0 px-md-3" style="max-width: 700px;">
             <a href="index.html"><img class="loginLogo" src="assets/img/loginLogo.png" alt="لوجو"></a>
             <h5 class="my-4">انشاء حساب مكتب تصميم</h5>
-            <form action="DesignSinup3.html">
+            <form action="creatPassword.html" class="row">
                 <div class="mb-2 d-flex flex-column gap-1 align-items-start justify-content-end">
                     <label for="Name">اسم المكتب <span class="text-danger fs-4">*</span></label>
                     <input id="Name" type="text" class="form-control" placeholder="اسم المكتب" required="">
                 </div>
                 <div class="mb-2 d-flex flex-column gap-1 align-items-start justify-content-end">
-                    <label for="userName">اسم المُمَثل<span class="text-danger fs-4">*</span></label>
-                    <input id="userName" type="text" class="form-control" placeholder="اسم المُمَثل" required="">
-                </div>
-
-                <div class="mb-2 d-flex flex-column gap-1 align-items-start justify-content-end">
                     <label for="Commercial_Number">رقم السجل التجاري<span class="text-danger fs-4">*</span></label>
                     <input id="Commercial_Number" type="number" class="form-control" placeholder="رقم السجل التجاري"
                         required="">
                 </div>
-
-                <div class="mb-2 d-flex flex-column gap-1 align-items-start  justify-content-end">
-                    <label for="citySelect">المدينة<span class="text-danger fs-4">*</span></label>
-                    <select id="citySelect" class="form-control" required>
-                        <option value="">المدينة</option>
-                        <option value="">الرياض</option>
-                        <option value="">جدة</option>
-                        <option value="">مكة</option>
-                        <option value="">المدينةالمنورة</option>
-                    </select>
+                
+            <button type="submit" class="btn submit w-100 my-3">التالي</button>
+                <div class="modal-send-overlay" id="modalSendOverlay">
+                    <div class=" modalSending " id="modalSending">
+                        <p id="status-text">جارِ الانشاء</p>
+                        <div class="dots-loader" id="loader">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="success" id="success">✔</div>
+                        <span id="closemodalSending" class="closemodalSending">&times;</span>
+                        <p class="success-text" id="success-text">تم انشاء الحساب</p>
+                    </div>
                 </div>
-
-
-                <button type="submit" class="btn submit w-100 my-3">التالي</button>
             </form>
             <div>
                 لديك حساب بالفعل
