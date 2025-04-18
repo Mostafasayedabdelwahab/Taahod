@@ -62,12 +62,31 @@ body section {
   padding-bottom: 0;
 }
 .navbar-brand img {
-  width: 204.470703125px;
-  height: 56px;
+  width: 150px;
+  height: 40px;
 }
 .navbar-nav .nav-link {
   color: var(--Text-color--);
-  font-weight: 500;
+  font-size: 15px;
+}
+@media (min-width: 1200px) {
+  .navbar-nav .nav-link {
+    position: relative;
+    padding: 30px 20px !important;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-nav .nav-link::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 15px;
+    color: var(--Text-color--);
+    border-left: 2px solid var(--Text-color--);
+  }
 }
 .navbar-nav .nav-link:hover {
   color: var(--main2-color--);
@@ -1779,10 +1798,11 @@ input[type="checkbox"] {
 /* end apply to project */
 
 .footer {
-  background: var(--main-color--);
+  /* background: var(--main-color--); */
   color: white;
   padding: 25px 0 0;
   overflow: hidden;
+  background: linear-gradient(180deg, #12cfa6, #510a98);
 }
 
 .footer * {
@@ -1805,6 +1825,7 @@ input[type="checkbox"] {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 20px;
+  margin: 40px 0;
 }
 
 .footer-top img {
@@ -1819,7 +1840,8 @@ input[type="checkbox"] {
 }
 .footer-column h3 {
   font-size: 18px;
-  color: var(--main2-color--);
+  /* color: var(--main2-color--); */
+  color: var(--holdText-color--);
   margin: 10px 0;
 }
 .footer-column p {
@@ -1837,12 +1859,15 @@ input[type="checkbox"] {
 }
 
 .footer-column ul li a {
-  color: var(--Text-color--);
+  /* color: var(--Text-color--); */
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
 .footer-column p {
-  color: var(--Text-color--);
+  /* color: var(--Text-color--);   */
+  color: var(--holdText-color--);
+
 }
 .footer-column ul li p {
   font-weight: bold;
@@ -1852,24 +1877,6 @@ input[type="checkbox"] {
   color: white;
 }
 
-.app_btn {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  column-gap: 5px;
-}
-.app_btn a {
-  white-space: nowrap;
-  color: var(--Text-color--);
-  background-color: black;
-  text-transform: capitalize;
-  font-size: 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: var(--transition);
-  padding: 3px;
-  cursor: pointer;
-}
 
 .payment-methods img {
   width: 50px;
@@ -1892,8 +1899,8 @@ input[type="checkbox"] {
   height: 40px;
   border-radius: 50%;
   border: none;
-  background-color: var(--main-color--);
-  border: 1px solid #fff;
+  /* background-color: var(--main-color--); */
+  /* border: 1px solid #fff; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2221,6 +2228,11 @@ input[type="checkbox"] {
 .navForLogin .navbar-brand img {
   width: 204.470703125px;
   height: 45px;
+}
+
+.navForLogin .navbar-nav .nav-link {
+  position: relative;
+  padding: 10px !important;
 }
 #Mybox img {
   width: 40px;
