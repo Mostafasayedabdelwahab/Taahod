@@ -235,9 +235,6 @@ header .dropdown-item:hover {
   font-size: 20px;
   margin: 0;
 }
-.hero-text p {
-  margin: 0;
-}
 .hero-content strong,
 .hero-text strong {
   color: var(--main-color--);
@@ -1283,7 +1280,6 @@ input[type="checkbox"] {
 }
 
 .why-section {
-  text-align: center;
   padding: 40px 20px;
 }
 .why-item {
@@ -1301,35 +1297,12 @@ input[type="checkbox"] {
   padding: 0;
 }
 
-@media screen and (max-width: 1250px) {
-  .why-item > div {
-    width: 54.3%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .why-item > div {
-    width: 55.7%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .why-item > div {
-    width: 57.7%;
-  }
-}
-@media screen and (max-width: 520px) {
-  .why-item > div {
-    width: 100%;
-  }
-}
 .why-item:nth-child(even) {
   justify-content: start;
 }
 
 .why-title {
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
 }
 .why-desc {
   font-size: 15px;
