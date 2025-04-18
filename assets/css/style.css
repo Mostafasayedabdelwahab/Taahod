@@ -2371,12 +2371,15 @@ input[type="checkbox"] {
 /* end  head for login */
 
 /* start add project */
+
+#skillsForm2 .tags-container,
 #skillsForm .tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   margin-top: 10px;
 }
+#skillsForm2 .tag,
 #skillsForm .tag {
   padding: 5px 10px;
   border-radius: 15px;
@@ -2385,11 +2388,13 @@ input[type="checkbox"] {
   cursor: pointer;
   border: 1px solid;
 }
+#skillsForm2 .tag span,
 #skillsForm .tag span {
   margin: 0 10px;
   cursor: pointer;
   font-size: 18px;
 }
+#skillsForm2 .dropdown-menu,
 #skillsForm .dropdown-menu {
   overflow-y: auto;
   width: 100%;
@@ -2401,6 +2406,7 @@ input[type="checkbox"] {
   inset: inherit !important;
   transform: none !important;
 }
+#skillsForm2 .dropdown-menu.show,
 #skillsForm .dropdown-menu.show {
   display: block;
   top: 85px !important;
