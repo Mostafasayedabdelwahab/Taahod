@@ -2993,4 +2993,7 @@ input[type="radio"] {
   display: none;
   margin-top: 10px;
 }
+.btn-project-details {
+  padding: 0;
+}
 /* new */
