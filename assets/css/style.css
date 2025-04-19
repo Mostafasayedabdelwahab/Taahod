@@ -70,7 +70,7 @@ body section {
 }
 .navbar-nav .nav-link {
   color: var(--Text-color--);
-  font-size: 15px;
+  font-size: 13px;
 }
 @media (min-width: 1200px) {
   .navbar-nav .nav-link {
@@ -86,9 +86,13 @@ body section {
     left: 0;
     transform: translateY(-50%);
     width: 4px;
-    height: 15px;
+    height: 10px;
     color: var(--Text-color--);
-    border-left: 2px solid var(--Text-color--);
+    border-left: 1px solid var(--Text-color--);
+  }
+   .navbar-nav .nav-item:last-child  .nav-link::after {
+    width: 0;
+    height: 0;
   }
 }
 .navbar-nav .nav-link:hover {
@@ -247,7 +251,7 @@ header .dropdown-item:hover {
 
 .hero-title {
   font-weight: 700;
-  font-size: 35px;
+  font-size: 28px;
   color: var(--Text-color--);
   line-height: 1.5;
 }
@@ -384,7 +388,7 @@ header .dropdown-item:hover {
 }
 
 .login-serviceForUser h1 {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 @media (max-width: 991px) {
@@ -1297,8 +1301,9 @@ input[type="checkbox"] {
 }
 
 .about-section .about-text {
-  font-size: 25px;
+  font-size: 20px;
   color: var(--Text-color--);
+  line-height: 1.8;
 }
 
 .why-section {
@@ -2784,9 +2789,7 @@ input[type="checkbox"] {
   stroke: var(--main2-color--);
 }
 
-.fs_biglarger {
-  font-size: 40px;
-}
+
 
 /* start paymentMethod_con  */
 
