@@ -2241,7 +2241,7 @@ input[type="checkbox"] {
 
 .navForLogin .navbar-nav .nav-link {
   position: relative;
-  padding: 10px !important;
+  /* padding: 10px !important; */
 }
 #Mybox img {
   width: 40px;
@@ -2268,6 +2268,7 @@ input[type="checkbox"] {
   }
   .boxForLogo {
     width: 100%;
+    align-items: center;
   }
   #Mybox svg {
     font-size: 20px;
